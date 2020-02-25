@@ -19,7 +19,16 @@ Author:     张祥龙
 Version:    UP３.1
 版本更新：改动较大，说明文档还没写完
 
+Date:         2020.2.25
+Author:     杨玉书
+Version:    UP３.1hero
+版本更新：修改了英雄车摩擦轮发射部分代码，结构还是和之前英雄车测试的代码一致，由于pid文件的删除，
+现在新增了pid计算函数，在shoot.c最底部，但是shoot.h文件有一个bug，定义在pid.h中的pid-t结构体在shoot.h中找不到
 
-
+Date:         2020.2.25
+Author:     吴凯
+Version:    UP３.1.1hero
+版本更新：修复上一版本shoot.h的bug
+新增了pid模糊计算函数，在shoot文件夹下的blurry_pid.c,但需要设置的参数过多，同时不知道代码是否有问题，无法没办法做测试，所以正式版本暂时还是用基本pid。
 
 

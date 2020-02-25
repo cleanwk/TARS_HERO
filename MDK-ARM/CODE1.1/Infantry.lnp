@@ -33,6 +33,7 @@
 "code1.1\task_gimbal.o"
 "..\DSP_LIB\arm_cortexM4lf_math.lib"
 "code1.1\shoot.o"
+"code1.1\blurry_pid.o"
 "code1.1\jy901.o"
 "code1.1\system.o"
 "code1.1\vision.o"

@@ -3,15 +3,14 @@
 //#include "stdint.h"
 #include "stm32f4xx_hal.h"
 #include "system.h"
-
+#include "pid.h"
 /*****************∏ﬂ…‰∆µ±ÿ–ÎΩµµÕ…‰ÀŸ£¨≤¶µØ±ÿ–Î∫Õƒ¶≤¡¬÷≈‰∫œ***********************/
 
 #define LEFT_RIGHT 0//£∞¥˙±Ì◊ÛCH1”“CH4£¨£±∑¥÷Æ
 
 
 #define laser_on    HAL_GPIO_WritePin(GPIOG, GPIO_PIN_13, GPIO_PIN_SET)   //º§π‚ø™∆Ù∫Í∂®“Â
-#define laser_off   HAL_GPIO_WritePin(GPIOG, GPIO_PIN_13, GPIO_PIN_RESET) //º§π‚πÿ±’∫Í∂®“Â
-
+#define laser_off   HAL_GPIO_WritePin(GPIOG, GPIO_PIN_13, GPIO_PIN_RESET) //º§π‚πÿ±’∫Í∂
 
 
 typedef struct 
@@ -28,7 +27,10 @@ void shoot_fric_ctrl(void);
 void shoot_StopMotor(void);
 void FRIC_KeyLevel_Ctrl(void);
 void shoot_init(void);
+void fric_set_output(int  fric_spd1, int  fric_spd2);
 void Shoot_Ctrl(void);
+float pid_calc(pid_t* pid, float get, float set);
+void abs_limit(float *a, float ABS_MAX);
 bool FRIC_RcSwitch(void);
 bool IF_FRIC_READY(void);
 
