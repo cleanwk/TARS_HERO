@@ -1,0 +1,4 @@
+每次用过CubeMX后，由于时钟没有使用，所以会默认关闭时钟相应HAL库功能
+解决办法：1.开启一个不用的时钟、
+	2.打开'stm32f4xx_hal_conf.h'，第64行，
+取消注释掉的#define HAL_TIM_MODULE_ENABLED

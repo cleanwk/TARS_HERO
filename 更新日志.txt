@@ -1,0 +1,25 @@
+Date:         2019.12.5
+Author:     张祥龙
+Version:    UP1.1
+版本更新：修复代码中YAW疯转，取最大值的BUG，CAN2移植中断BUG
+
+Date:         2019.12.5
+Author:     张祥龙
+Version:    UP1.2
+版本更新：CAN2移植中断BUG进一步修正，收发实验完成，CAN2接收遥控器代码完成
+
+Date:         2019.12.5
+Author:     张祥龙
+Version:    UP2.1
+版本更新：基于定时器3的操作系统完成，大幅修改代码，删除CubeMX文件
+
+
+Date:         2020.2.16
+Author:     张祥龙
+Version:    UP３.1
+版本更新：改动较大，说明文档还没写完
+
+
+
+
+

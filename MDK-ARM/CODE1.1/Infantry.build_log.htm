@@ -1,0 +1,74 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.21.1.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: yys yys, HP Inc., LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.21a
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 3 (build 300)
+Assembler:       Armasm.exe V5.06 update 3 (build 300)
+Linker/Locator:  ArmLink.exe V5.06 update 3 (build 300)
+Library Manager: ArmAr.exe V5.06 update 3 (build 300)
+Hex Converter:   FromElf.exe V5.06 update 3 (build 300)
+CPU DLL:         SARMCM3.DLL V5.21a
+Dialog DLL:      DCM.DLL V1.13.8.0
+Target DLL:      Segger\JL2CM3.dll V2.99.23.0
+Dialog DLL:      TCM.DLL V1.14.14.0
+ 
+<h2>Project:</h2>
+D:\RM\RMcode\UP3.1\MDK-ARM\CODE1.1.uvprojx
+Project File Date:  02/16/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 3 (build 300)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'CODE1.1'
+compiling JY901.C...
+compiling main.c...
+compiling shoot.c...
+user\shoot.c(244): warning:  #175-D: subscript out of range
+  fric_out1=pid_calc(&M3508E_PID, M3508[4].rotor_speed,fric_spd1);
+user\shoot.c(245): warning:  #175-D: subscript out of range
+  fric_out2=pid_calc(&M3508F_PID, M3508[5].rotor_speed,fric_spd2);
+user\shoot.c(247): warning:  #1-D: last line of file ends without a newline
+  }
+user\shoot.c: 3 warnings, 0 errors
+compiling system.c...
+compiling magazine.c...
+compiling user_tim.c...
+compiling task_gimbal.c...
+compiling revolver.c...
+compiling bsp_can.c...
+compiling vision.c...
+linking...
+CODE1.1\Infantry.axf: Error: L6218E: Undefined symbol PID_struct_init (referred from shoot.o).
+CODE1.1\Infantry.axf: Error: L6218E: Undefined symbol pid_calc (referred from shoot.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 2 error messages.
+"CODE1.1\Infantry.axf" - 2 Error(s), 3 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.5.0.pack
+                ARM::CMSIS:CORE:4.3.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 4.3.0
+
+<h2>Collection of Component include folders:</h2>
+  D:\RM\RMcode\UP3.1\MDK-ARM\RTE
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:4.3.0
+Target not created.
+Build Time Elapsed:  00:00:11
+</pre>
+</body>
+</html>
