@@ -18,7 +18,7 @@ enum
     kd=2,
 };
 
-typedef struct __pid_t
+typedef struct _pid_t
 {
     float p;
     float i;
@@ -42,8 +42,8 @@ typedef struct __pid_t
 //	  float max_err;
 //	  float deadband;				//err < deadband return
 //    uint32_t pid_mode;
-    uint32_t MaxOutput;				//输出限幅
-    uint32_t i_limit;		//积分限幅
+		uint32_t MaxOutput;				//输出限幅
+		uint32_t i_limit;		//积分限幅
 //    uint32_t i_seperate;
     
     int update_flag;
