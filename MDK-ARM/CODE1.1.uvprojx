@@ -614,6 +614,16 @@
               <FileType>1</FileType>
               <FilePath>.\user\shoot.c</FilePath>
             </File>
+            <File>
+              <FileName>blurry_pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\blurry_pid.c</FilePath>
+            </File>
+            <File>
+              <FileName>blurry_pid.H</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\blurry_pid.H</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
