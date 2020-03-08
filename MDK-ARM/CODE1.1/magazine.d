@@ -40,6 +40,7 @@ code1.1\magazine.o: ../Inc/dma.h
 code1.1\magazine.o: ../Inc/tim.h
 code1.1\magazine.o: ../Inc/usart.h
 code1.1\magazine.o: ../Inc/gpio.h
+code1.1\magazine.o: ../Inc/tim.h
 code1.1\magazine.o: user\mytype.h
 code1.1\magazine.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 code1.1\magazine.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdarg.h
@@ -60,3 +61,4 @@ code1.1\magazine.o: user\shoot.h
 code1.1\magazine.o: user\JY901.H
 code1.1\magazine.o: user\vision.h
 code1.1\magazine.o: user\magazine.h
+code1.1\magazine.o: user\revolver.h

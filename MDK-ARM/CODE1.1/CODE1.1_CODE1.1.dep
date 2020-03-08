@@ -35,7 +35,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
 I (../Inc/can.h)(0x5E591F33)
 I (../Inc/dma.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/usart.h)(0x5E591F33)
 I (../Inc/gpio.h)(0x5E591F33)
 I (.\user\system.h)(0x5E591F33)
@@ -54,10 +54,11 @@ I (..\DSP_LIB\Include\arm_math.h)(0x5E591F32)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5E591F32)
 I (D:\app\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
 I (.\user\task_gimbal.h)(0x5E591F33)
-I (.\user\shoot.h)(0x5E6503CA)
+I (.\user\shoot.h)(0x5E650DF4)
 I (.\user\JY901.H)(0x5E591F33)
 I (.\user\vision.h)(0x5E591F33)
 I (.\user\magazine.h)(0x5E591F33)
+I (.\user\revolver.h)(0x5E63CC38)
 F (../Src/gpio.c)(0x5E591F33)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\gpio.o --omf_browse code1.1\gpio.crf --depend code1.1\gpio.d)
 I (../Inc/gpio.h)(0x5E591F33)
 I (../Inc/main.h)(0x5E591F33)
@@ -94,7 +95,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
 I (../Inc/can.h)(0x5E591F33)
 I (../Inc/dma.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/usart.h)(0x5E591F33)
 F (../Src/can.c)(0x5E591F33)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\can.o --omf_browse code1.1\can.crf --depend code1.1\can.d)
 I (../Inc/can.h)(0x5E591F33)
@@ -131,7 +132,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
 I (../Inc/dma.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/usart.h)(0x5E591F33)
 I (../Inc/gpio.h)(0x5E591F33)
 F (../Src/dma.c)(0x5E591F33)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\dma.o --omf_browse code1.1\dma.crf --depend code1.1\dma.d)
@@ -169,11 +170,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
 I (../Inc/can.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/usart.h)(0x5E591F33)
 I (../Inc/gpio.h)(0x5E591F33)
-F (../Src/tim.c)(0x5E6503CA)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\tim.o --omf_browse code1.1\tim.crf --depend code1.1\tim.d)
-I (../Inc/tim.h)(0x5E6503CA)
+F (../Src/tim.c)(0x5E650D88)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\tim.o --omf_browse code1.1\tim.crf --depend code1.1\tim.d)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/main.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5E591F33)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5E591F33)
@@ -246,7 +247,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
 I (../Inc/can.h)(0x5E591F33)
 I (../Inc/dma.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/gpio.h)(0x5E591F33)
 F (../Src/stm32f4xx_it.c)(0x5E591F33)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\stm32f4xx_it.o --omf_browse code1.1\stm32f4xx_it.crf --depend code1.1\stm32f4xx_it.d)
 I (../Inc/main.h)(0x5E591F33)
@@ -283,7 +284,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
 I (../Inc/can.h)(0x5E591F33)
 I (../Inc/dma.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/usart.h)(0x5E591F33)
 I (../Inc/gpio.h)(0x5E591F33)
 I (../Inc/stm32f4xx_it.h)(0x5E591F33)
@@ -323,7 +324,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
 I (../Inc/can.h)(0x5E591F33)
 I (../Inc/dma.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/usart.h)(0x5E591F33)
 I (../Inc/gpio.h)(0x5E591F33)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c)(0x5E591F33)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\stm32f4xx_hal_can.o --omf_browse code1.1\stm32f4xx_hal_can.crf --depend code1.1\stm32f4xx_hal_can.d)
@@ -939,7 +940,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
 I (../Inc/can.h)(0x5E591F33)
 I (../Inc/dma.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/usart.h)(0x5E591F33)
 I (../Inc/gpio.h)(0x5E591F33)
 I (user\mytype.h)(0x5E591F33)
@@ -956,10 +957,11 @@ I (..\DSP_LIB\Include\arm_math.h)(0x5E591F32)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5E591F32)
 I (D:\app\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
 I (user\task_gimbal.h)(0x5E591F33)
-I (user\shoot.h)(0x5E6503CA)
+I (user\shoot.h)(0x5E650DF4)
 I (user\JY901.H)(0x5E591F33)
 I (user\vision.h)(0x5E591F33)
 I (user\magazine.h)(0x5E591F33)
+I (user\revolver.h)(0x5E63CC38)
 F (.\user\bsp_can.h)(0x5E591F33)()
 F (.\user\bsp_uart.c)(0x5E591F33)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\bsp_uart.o --omf_browse code1.1\bsp_uart.crf --depend code1.1\bsp_uart.d)
 I (D:\app\keil\ARM\ARMCC\include\string.h)(0x574E3E26)
@@ -1000,7 +1002,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
 I (../Inc/can.h)(0x5E591F33)
 I (../Inc/dma.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/gpio.h)(0x5E591F33)
 F (.\user\bsp_uart.h)(0x5E591F33)()
 F (.\user\chassic.c)(0x5E591F33)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\chassic.o --omf_browse code1.1\chassic.crf --depend code1.1\chassic.d)
@@ -1040,7 +1042,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
 I (../Inc/can.h)(0x5E591F33)
 I (../Inc/dma.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/gpio.h)(0x5E591F33)
 F (.\user\chassic.h)(0x5E591F33)()
 F (.\user\user_tim.c)(0x5E591F33)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\user_tim.o --omf_browse code1.1\user_tim.crf --depend code1.1\user_tim.d)
@@ -1078,7 +1080,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
 I (../Inc/can.h)(0x5E591F33)
 I (../Inc/dma.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/usart.h)(0x5E591F33)
 I (../Inc/gpio.h)(0x5E591F33)
 I (user\system.h)(0x5E591F33)
@@ -1097,10 +1099,11 @@ I (..\DSP_LIB\Include\arm_math.h)(0x5E591F32)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5E591F32)
 I (D:\app\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
 I (user\task_gimbal.h)(0x5E591F33)
-I (user\shoot.h)(0x5E6503CA)
+I (user\shoot.h)(0x5E650DF4)
 I (user\JY901.H)(0x5E591F33)
 I (user\vision.h)(0x5E591F33)
 I (user\magazine.h)(0x5E591F33)
+I (user\revolver.h)(0x5E63CC38)
 F (.\user\task_gimbal.c)(0x5E591F33)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\task_gimbal.o --omf_browse code1.1\task_gimbal.crf --depend code1.1\task_gimbal.d)
 I (user\task_gimbal.h)(0x5E591F33)
 I (user\system.h)(0x5E591F33)
@@ -1138,7 +1141,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
 I (../Inc/can.h)(0x5E591F33)
 I (../Inc/dma.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/usart.h)(0x5E591F33)
 I (../Inc/gpio.h)(0x5E591F33)
 I (user\mytype.h)(0x5E591F33)
@@ -1155,14 +1158,15 @@ I (user\Calculate.h)(0x5E591F33)
 I (..\DSP_LIB\Include\arm_math.h)(0x5E591F32)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5E591F32)
 I (D:\app\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
-I (user\shoot.h)(0x5E6503CA)
+I (user\shoot.h)(0x5E650DF4)
 I (user\JY901.H)(0x5E591F33)
 I (user\vision.h)(0x5E591F33)
 I (user\magazine.h)(0x5E591F33)
+I (user\revolver.h)(0x5E63CC38)
 F (.\user\task_gimbal.h)(0x5E591F33)()
 F (..\DSP_LIB\arm_cortexM4lf_math.lib)(0x5E591F32)()
-F (.\user\shoot.c)(0x5E6503CA)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\shoot.o --omf_browse code1.1\shoot.crf --depend code1.1\shoot.d)
-I (user\shoot.h)(0x5E6503CA)
+F (.\user\shoot.c)(0x5E650D87)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\shoot.o --omf_browse code1.1\shoot.crf --depend code1.1\shoot.d)
+I (user\shoot.h)(0x5E650DF4)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5E591F33)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5E591F33)
@@ -1198,7 +1202,7 @@ I (user\system.h)(0x5E591F33)
 I (../Inc/main.h)(0x5E591F33)
 I (../Inc/can.h)(0x5E591F33)
 I (../Inc/dma.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/usart.h)(0x5E591F33)
 I (../Inc/gpio.h)(0x5E591F33)
 I (user\mytype.h)(0x5E591F33)
@@ -1219,6 +1223,7 @@ I (user\task_gimbal.h)(0x5E591F33)
 I (user\JY901.H)(0x5E591F33)
 I (user\vision.h)(0x5E591F33)
 I (user\magazine.h)(0x5E591F33)
+I (user\revolver.h)(0x5E63CC38)
 F (.\user\blurry_pid.c)(0x5E592266)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\blurry_pid.o --omf_browse code1.1\blurry_pid.crf --depend code1.1\blurry_pid.d)
 I (user\blurry_pid.h)(0x5E592266)
 F (.\user\blurry_pid.H)(0x5E592266)()
@@ -1260,7 +1265,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
 I (../Inc/can.h)(0x5E591F33)
 I (../Inc/dma.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/usart.h)(0x5E591F33)
 I (../Inc/gpio.h)(0x5E591F33)
 I (user\mytype.h)(0x5E591F33)
@@ -1277,9 +1282,10 @@ I (..\DSP_LIB\Include\arm_math.h)(0x5E591F32)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5E591F32)
 I (D:\app\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
 I (user\task_gimbal.h)(0x5E591F33)
-I (user\shoot.h)(0x5E6503CA)
+I (user\shoot.h)(0x5E650DF4)
 I (user\vision.h)(0x5E591F33)
 I (user\magazine.h)(0x5E591F33)
+I (user\revolver.h)(0x5E63CC38)
 F (.\user\JY901.H)(0x5E591F33)()
 F (.\user\system.c)(0x5E591F33)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\system.o --omf_browse code1.1\system.crf --depend code1.1\system.d)
 I (user\system.h)(0x5E591F33)
@@ -1317,7 +1323,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
 I (../Inc/can.h)(0x5E591F33)
 I (../Inc/dma.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/usart.h)(0x5E591F33)
 I (../Inc/gpio.h)(0x5E591F33)
 I (user\mytype.h)(0x5E591F33)
@@ -1335,12 +1341,13 @@ I (..\DSP_LIB\Include\arm_math.h)(0x5E591F32)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5E591F32)
 I (D:\app\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
 I (user\task_gimbal.h)(0x5E591F33)
-I (user\shoot.h)(0x5E6503CA)
+I (user\shoot.h)(0x5E650DF4)
 I (user\JY901.H)(0x5E591F33)
 I (user\vision.h)(0x5E591F33)
 I (user\magazine.h)(0x5E591F33)
+I (user\revolver.h)(0x5E63CC38)
 F (.\user\system.h)(0x5E591F33)()
-F (.\user\shoot.h)(0x5E6503CA)()
+F (.\user\shoot.h)(0x5E650DF4)()
 F (.\user\vision.c)(0x5E591F33)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\vision.o --omf_browse code1.1\vision.crf --depend code1.1\vision.d)
 I (user\vision.h)(0x5E591F33)
 I (user\system.h)(0x5E591F33)
@@ -1378,7 +1385,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
 I (../Inc/can.h)(0x5E591F33)
 I (../Inc/dma.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/usart.h)(0x5E591F33)
 I (../Inc/gpio.h)(0x5E591F33)
 I (user\mytype.h)(0x5E591F33)
@@ -1396,9 +1403,10 @@ I (..\DSP_LIB\Include\arm_math.h)(0x5E591F32)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5E591F32)
 I (D:\app\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
 I (user\task_gimbal.h)(0x5E591F33)
-I (user\shoot.h)(0x5E6503CA)
+I (user\shoot.h)(0x5E650DF4)
 I (user\JY901.H)(0x5E591F33)
 I (user\magazine.h)(0x5E591F33)
+I (user\revolver.h)(0x5E63CC38)
 F (.\user\vision.h)(0x5E591F33)()
 F (.\user\Calculate.c)(0x5E591F33)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\calculate.o --omf_browse code1.1\calculate.crf --depend code1.1\calculate.d)
 I (user\Calculate.h)(0x5E591F33)
@@ -1478,7 +1486,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
 I (../Inc/can.h)(0x5E591F33)
 I (../Inc/dma.h)(0x5E591F33)
-I (../Inc/tim.h)(0x5E6503CA)
+I (../Inc/tim.h)(0x5E650D88)
 I (../Inc/usart.h)(0x5E591F33)
 I (../Inc/gpio.h)(0x5E591F33)
 I (user\mytype.h)(0x5E591F33)
@@ -1496,9 +1504,68 @@ I (..\DSP_LIB\Include\arm_math.h)(0x5E591F32)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5E591F32)
 I (D:\app\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
 I (user\task_gimbal.h)(0x5E591F33)
-I (user\shoot.h)(0x5E6503CA)
+I (user\shoot.h)(0x5E650DF4)
 I (user\JY901.H)(0x5E591F33)
 I (user\vision.h)(0x5E591F33)
+I (user\revolver.h)(0x5E63CC38)
 F (.\user\magazine.h)(0x5E591F33)()
 F (.\user\revolver.c)(0x5E6503DA)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\codehero\TARS_HERO\MDK-ARM\RTE-ID:\app\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\app\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\revolver.o --omf_browse code1.1\revolver.crf --depend code1.1\revolver.d)
-F (.\user\revolver.h)(0x00000000)()
+I (user\revolver.h)(0x5E63CC38)
+I (user\system.h)(0x5E591F33)
+I (../Inc/main.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5E591F33)
+I (../Inc/stm32f4xx_hal_conf.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x5E591F33)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5E591F32)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h)(0x5E591F32)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x5E591F32)
+I (D:\app\keil\ARM\ARMCC\include\stdint.h)(0x574E3E26)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x5E591F32)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x5E591F32)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5E591F32)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x5E591F32)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x5E591F32)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5E591F33)
+I (D:\app\keil\ARM\ARMCC\include\stddef.h)(0x574E3E26)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5E591F33)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5E591F33)
+I (../Inc/can.h)(0x5E591F33)
+I (../Inc/dma.h)(0x5E591F33)
+I (../Inc/tim.h)(0x5E650D88)
+I (../Inc/usart.h)(0x5E591F33)
+I (../Inc/gpio.h)(0x5E591F33)
+I (user\mytype.h)(0x5E591F33)
+I (D:\app\keil\ARM\ARMCC\include\stdlib.h)(0x574E3E26)
+I (D:\app\keil\ARM\ARMCC\include\stdarg.h)(0x574E3E26)
+I (D:\app\keil\ARM\ARMCC\include\string.h)(0x574E3E26)
+I (D:\app\keil\ARM\ARMCC\include\stdbool.h)(0x574E3E26)
+I (user\bsp_uart.h)(0x5E591F33)
+I (user\bsp_can.h)(0x5E591F33)
+I (user\pid.h)(0x5E592266)
+I (user\user_tim.h)(0x5E591F33)
+I (user\chassic.h)(0x5E591F33)
+I (user\Calculate.h)(0x5E591F33)
+I (..\DSP_LIB\Include\arm_math.h)(0x5E591F32)
+I (..\DSP_LIB\Include\core_cm4.h)(0x5E591F32)
+I (D:\app\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
+I (user\task_gimbal.h)(0x5E591F33)
+I (user\shoot.h)(0x5E650DF4)
+I (user\JY901.H)(0x5E591F33)
+I (user\vision.h)(0x5E591F33)
+I (user\magazine.h)(0x5E591F33)
+F (.\user\revolver.h)(0x5E63CC38)()

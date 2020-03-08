@@ -40,6 +40,7 @@ code1.1\vision.o: ../Inc/dma.h
 code1.1\vision.o: ../Inc/tim.h
 code1.1\vision.o: ../Inc/usart.h
 code1.1\vision.o: ../Inc/gpio.h
+code1.1\vision.o: ../Inc/tim.h
 code1.1\vision.o: user\mytype.h
 code1.1\vision.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 code1.1\vision.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdarg.h
@@ -60,3 +61,4 @@ code1.1\vision.o: user\shoot.h
 code1.1\vision.o: user\JY901.H
 code1.1\vision.o: user\vision.h
 code1.1\vision.o: user\magazine.h
+code1.1\vision.o: user\revolver.h

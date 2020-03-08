@@ -40,6 +40,7 @@ code1.1\bsp_can.o: ../Inc/dma.h
 code1.1\bsp_can.o: ../Inc/tim.h
 code1.1\bsp_can.o: ../Inc/usart.h
 code1.1\bsp_can.o: ../Inc/gpio.h
+code1.1\bsp_can.o: ../Inc/tim.h
 code1.1\bsp_can.o: user\mytype.h
 code1.1\bsp_can.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 code1.1\bsp_can.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdarg.h
@@ -60,3 +61,4 @@ code1.1\bsp_can.o: user\shoot.h
 code1.1\bsp_can.o: user\JY901.H
 code1.1\bsp_can.o: user\vision.h
 code1.1\bsp_can.o: user\magazine.h
+code1.1\bsp_can.o: user\revolver.h

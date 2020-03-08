@@ -39,3 +39,4 @@ code1.1\can.o: ../Inc/main.h
 code1.1\can.o: ../Inc/tim.h
 code1.1\can.o: ../Inc/usart.h
 code1.1\can.o: ../Inc/gpio.h
+code1.1\can.o: ../Inc/tim.h

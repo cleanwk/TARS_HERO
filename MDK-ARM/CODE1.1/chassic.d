@@ -40,3 +40,4 @@ code1.1\chassic.o: ../Inc/dma.h
 code1.1\chassic.o: ../Inc/tim.h
 code1.1\chassic.o: ../Inc/usart.h
 code1.1\chassic.o: ../Inc/gpio.h
+code1.1\chassic.o: ../Inc/tim.h

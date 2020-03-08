@@ -39,6 +39,7 @@ code1.1\system.o: ../Inc/dma.h
 code1.1\system.o: ../Inc/tim.h
 code1.1\system.o: ../Inc/usart.h
 code1.1\system.o: ../Inc/gpio.h
+code1.1\system.o: ../Inc/tim.h
 code1.1\system.o: user\mytype.h
 code1.1\system.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 code1.1\system.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdarg.h
@@ -59,3 +60,4 @@ code1.1\system.o: user\shoot.h
 code1.1\system.o: user\JY901.H
 code1.1\system.o: user\vision.h
 code1.1\system.o: user\magazine.h
+code1.1\system.o: user\revolver.h

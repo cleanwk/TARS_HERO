@@ -12,6 +12,7 @@ pid_t M3508F_PID;//左右摩擦轮pid变量
 //#define FRI_MID  	2		//B键射速，
 #define FRI_HIGH 	2		//B键 英雄高射速
 #define FRI_MAD  	3		//吊射射速，英雄暂定高低，吊射三种
+#define rubber_speed  500  //胶轮的速度
 //#define FRI_MAX     5		//极限射速
 fric_shoot_t fric_speed;
 //遥控模式下的一些标志位
@@ -322,4 +323,11 @@ float pid_calc(pid_t* pid, float get, float set){
 //    pid->set[LAST] = pid->set[NOW];
 //      return pid->pid_mode==POSITION_PID ? pid->pos_out : pid->delta_out;
         return pid->pos_out;
+}
+
+
+//设置胶轮转速
+void shoot_rubber_ctrl(void)
+{
+	TIM8->CCR1=rubber_speed; //通道1
 }

@@ -38,5 +38,6 @@ code1.1\stm32f4xx_it.o: ../Inc/dma.h
 code1.1\stm32f4xx_it.o: ../Inc/tim.h
 code1.1\stm32f4xx_it.o: ../Inc/usart.h
 code1.1\stm32f4xx_it.o: ../Inc/gpio.h
+code1.1\stm32f4xx_it.o: ../Inc/tim.h
 code1.1\stm32f4xx_it.o: ../Inc/stm32f4xx_it.h
 code1.1\stm32f4xx_it.o: .\user\bsp_uart.h

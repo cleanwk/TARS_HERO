@@ -41,6 +41,7 @@ code1.1\jy901.o: ../Inc/dma.h
 code1.1\jy901.o: ../Inc/tim.h
 code1.1\jy901.o: ../Inc/usart.h
 code1.1\jy901.o: ../Inc/gpio.h
+code1.1\jy901.o: ../Inc/tim.h
 code1.1\jy901.o: user\mytype.h
 code1.1\jy901.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 code1.1\jy901.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdarg.h
@@ -59,3 +60,4 @@ code1.1\jy901.o: user\task_gimbal.h
 code1.1\jy901.o: user\shoot.h
 code1.1\jy901.o: user\vision.h
 code1.1\jy901.o: user\magazine.h
+code1.1\jy901.o: user\revolver.h

@@ -38,3 +38,4 @@ code1.1\stm32f4xx_hal_msp.o: ../Inc/dma.h
 code1.1\stm32f4xx_hal_msp.o: ../Inc/tim.h
 code1.1\stm32f4xx_hal_msp.o: ../Inc/usart.h
 code1.1\stm32f4xx_hal_msp.o: ../Inc/gpio.h
+code1.1\stm32f4xx_hal_msp.o: ../Inc/tim.h

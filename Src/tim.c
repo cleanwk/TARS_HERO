@@ -224,3 +224,47 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
 /* USER CODE END 1 */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+
+
+//胶轮电机TIM8配置
+
+TIM_HandleTypeDef TIM8_PWM_Handler;
+TIM_OC_InitTypeDef TIM8_PWM_OC;
+
+void TIM8_PWM_Init(void)
+{
+		
+		TIM8_PWM_Handler.Instance=TIM8;
+		TIM8_PWM_Handler.Init.CounterMode=TIM_COUNTERMODE_UP;  
+		TIM8_PWM_Handler.Init.Period=20000-1;
+		TIM8_PWM_Handler.Init.Prescaler=167;
+		HAL_TIM_PWM_Init(&TIM8_PWM_Handler);  //PWM的参数配置
+		
+		TIM8_PWM_OC.OCMode=TIM_OCMODE_PWM1;
+		TIM8_PWM_OC.Pulse=1000;
+		TIM8_PWM_OC.OCPolarity=TIM_OCPOLARITY_HIGH;
+		HAL_TIM_PWM_ConfigChannel(&TIM8_PWM_Handler,&TIM8_PWM_OC,TIM_CHANNEL_1);   //CH1 通道一
+		
+		HAL_TIM_PWM_Start(&TIM8_PWM_Handler,TIM_CHANNEL_1);
+}
+
+void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef *htim)
+{
+	
+	
+	if(htim->Instance==TIM8)
+	{
+		GPIO_InitTypeDef GPIO_Initure;
+		__HAL_RCC_TIM8_CLK_ENABLE();
+		__HAL_RCC_GPIOI_CLK_ENABLE();
+		
+		GPIO_Initure.Pin=GPIO_PIN_5;			//PI5输出
+		GPIO_Initure.Mode=GPIO_MODE_AF_PP;		
+		GPIO_Initure.Pull=GPIO_PULLUP;			
+		GPIO_Initure.Speed=GPIO_SPEED_FAST;		
+		GPIO_Initure.Alternate=GPIO_AF3_TIM8;	
+		HAL_GPIO_Init(GPIOI,&GPIO_Initure);	   	//初始化PI5
+	}
+
+}

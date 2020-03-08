@@ -42,3 +42,4 @@ code1.1\bsp_uart.o: ../Inc/dma.h
 code1.1\bsp_uart.o: ../Inc/tim.h
 code1.1\bsp_uart.o: ../Inc/usart.h
 code1.1\bsp_uart.o: ../Inc/gpio.h
+code1.1\bsp_uart.o: ../Inc/tim.h

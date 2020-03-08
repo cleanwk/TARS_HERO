@@ -39,3 +39,4 @@ code1.1\gpio.o: ../Inc/dma.h
 code1.1\gpio.o: ../Inc/tim.h
 code1.1\gpio.o: ../Inc/usart.h
 code1.1\gpio.o: ../Inc/gpio.h
+code1.1\gpio.o: ../Inc/tim.h

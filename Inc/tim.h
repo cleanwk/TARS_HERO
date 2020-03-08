@@ -58,3 +58,22 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
   */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
+
+//TIM8_PWM µƒ≈‰÷√
+
+#ifndef _TIM_H
+#define _TIM_H
+
+extern TIM_HandleTypeDef TIM8_PWM_Handler;
+extern TIM_OC_InitTypeDef TIM8_PWM_OC;
+
+void TIM8_PWM_Init(void);
+void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef *htim);
+
+
+
+#endif
+
+
+

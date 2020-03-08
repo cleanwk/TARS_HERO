@@ -38,6 +38,7 @@ code1.1\user_tim.o: ../Inc/dma.h
 code1.1\user_tim.o: ../Inc/tim.h
 code1.1\user_tim.o: ../Inc/usart.h
 code1.1\user_tim.o: ../Inc/gpio.h
+code1.1\user_tim.o: ../Inc/tim.h
 code1.1\user_tim.o: user\system.h
 code1.1\user_tim.o: user\mytype.h
 code1.1\user_tim.o: D:\app\keil\ARM\ARMCC\Bin\..\include\stdlib.h
@@ -59,3 +60,4 @@ code1.1\user_tim.o: user\shoot.h
 code1.1\user_tim.o: user\JY901.H
 code1.1\user_tim.o: user\vision.h
 code1.1\user_tim.o: user\magazine.h
+code1.1\user_tim.o: user\revolver.h
