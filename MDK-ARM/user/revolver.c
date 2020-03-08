@@ -28,7 +28,7 @@ int16_t Revolver_Angle_Measure_Prev;//上次剩下的累加和角度,用于圈数计算判断
 //拨盘测量速度
 int16_t Revolver_Speed_Measure;
 //拨盘测量角度
-int16_t Revolver_Angle_Measure;
+int16_t Revolver_Angle_Measure;//代码中测量角度没有加上（没找到哪有赋值的）应该加入3508的实施角度赋值
 //拨盘速度误差
 float Revolver_Speed_Error;
 //拨盘角度误差
@@ -304,7 +304,7 @@ void REVOLVER_Key_Ctrl(void)
 	SHOOT_NORMAL_Ctrl();//确定射击模式
 	
 	/*- 确定射击间隔和射击模式 -*/
-	switch(actShoot)
+	switch(actShoot)//连发什么的先不注释，后期再商量一下英雄具体发射需求
 	{
 		case SHOOT_NORMAL:
 			//射击模式选择,默认不打弹
@@ -396,15 +396,15 @@ void SHOOT_NORMAL_Ctrl(void)
 		Revolver_mode = REVOL_POSI_MODE;
 		actShoot = SHOOT_TRIPLE;//连发模式
 	}
-	else if(IF_KEY_PRESSED_B	//高射频低射速
-				&& !IF_MOUSE_PRESSED_LEFT && !IF_KEY_PRESSED_Z /*&& !GIMBAL_IfAutoHit()*/)
+	else if(IF_MOUSE_PRESSED_LEFT	//英雄正常射速（根据结构，射速模式也得更改）
+				/*&& !IF_MOUSE_PRESSED_LEFT && !IF_KEY_PRESSED_Z && !GIMBAL_IfAutoHit()*/)
 	{
 		Revolver_mode = REVOL_POSI_MODE;
 		actShoot = SHOOT_HIGHTF_LOWS;
 		shoot_left_time = 0;
 	}
-	else if(IF_KEY_PRESSED_Z	//高射频极低射速,推家专用
-				&& !IF_MOUSE_PRESSED_LEFT && !IF_KEY_PRESSED_B)
+	else if(IF_KEY_PRESSED_B	//英雄高射速
+			/*	&& !IF_MOUSE_PRESSED_LEFT && !IF_KEY_PRESSED_B*/)
 	{
 		Revolver_mode = REVOL_POSI_MODE;
 		actShoot = SHOOT_MIDF_HIGHTS;
