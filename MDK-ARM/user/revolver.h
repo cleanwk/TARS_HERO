@@ -19,26 +19,41 @@ typedef enum
 	SHOOT_BUFF         =  5,//打符模式
 	SHOOT_AUTO         =  6,//自瞄自动射击
 }eShootAction;
+void REVOLVER_Rest(void); //重启拨盘
+void Revolver_Angle_Rest(void);  //拨盘角度重置
+void REVOLVER_InitArgument(void); //初始化拨盘
+void REVOLVER_CANbusCtrlMotor(int16_t v);
 
+/*********拨盘总控制*************/
 void Task_Revolver(void);
-
-void REVOLVER_InitArgument(void);
 void REVOLVER_Rc_Ctrl(void);
 void REVOLVER_Key_Ctrl(void);
+
+/******键盘模式拨盘速度环和位置环的控制*******/
+void REVOLVER_KeySpeedCtrl(void);
+void REVOLVER_KeyPosiCtrl(void);
+
+
+/******底盘键盘模式各类模式小函数*******/
 void SHOOT_NORMAL_Ctrl(void);
 void SHOOT_SINGLE_Ctrl(void);
 void SHOOT_TRIPLE_Ctrl(void);
 void SHOOT_HIGHTF_LOWS_Ctrl(void);
 void SHOOT_MIDF_HIGHTS_Ctrl(void);
-void Revolver_Angle_Rest(void);
 void SHOOT_AUTO_Ctrl(void);
-bool Revolver_Heat_Limit(void);
-void REVOLVER_Rest(void);
+
+/****卡弹处理*****/
+void REVOL_PositStuck(void);  //位置环卡弹
+
+/*****PID控制*******/
 void REVOL_PositionLoop(void);
 void REVOL_SpeedLoop(void);
+
+bool Revolver_Heat_Limit(void);
 uint16_t JUDGE_usGetShootCold(void);
-void REVOLVER_KeySpeedCtrl(void);
-void REVOLVER_KeyPosiCtrl(void);
-void REVOLVER_CANbusCtrlMotor(int16_t v);
+
+
+
+
 
 #endif
