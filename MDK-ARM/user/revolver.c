@@ -37,6 +37,14 @@ float Revolver_Angle_Error[2];//  inner/outer
 float  Revolver_Angle_Target;
 //拨盘目标转速
 float  Revolver_Speed_Target;
+/************卡弹************/
+#define Stuck_Speed_Low       60       //测量速度低于这个数,则认为有可能卡弹
+#define Stuck_Revol_PIDTerm   4000      //PID输出大于这个数则认为有可能卡弹 （实际实验看效果再改）
+#define Stuck_TurnBack_Time   100       //倒转时间,时间越长倒得越多   （实际实验看效果再改）
+#define Stuck_SpeedPID_Time   100       //速度连续 ms过小,PID连续  ms过大   （实际实验看效果再改）
+
+
+
 /****************射频控制******************/
 #define SHOOT_LEFT_TIME_MAX  20	//左键连按切换间隔
 
@@ -265,7 +273,7 @@ void REVOLVER_Rc_Ctrl(void)
 			Revolver_Angle_Target_Sum = RAMP_float(Revolver_Target_Sum_temp, Revolver_Angle_Target_Sum, Revolver_Ramp);
 		}
 		
-//		REVOL_PositStuck();//卡弹判断及倒转
+		  REVOL_PositStuck();//位置环式卡弹判断及倒转（单发模式）
 	}
 	/**************连发版*******************/
 	else if(IF_RC_SW2_DOWN)//陀螺仪模式
@@ -722,7 +730,50 @@ void REVOLVER_CANbusCtrlMotor(int16_t v)
     
     HAL_CAN_AddTxMessage(&hcan1, &tx_header, tx_data,(uint32_t*)CAN_TX_MAILBOX0);
 }
+/*****************************卡弹处理**************************************/
+/**
+  * @brief  位置环式卡弹处理
+  * @param  void
+  * @retval void
+  * @attention  卡住就反转n格
+  */
+void REVOL_PositStuck(void)
+{
+	static uint16_t  stuck_time      = 0;//卡弹计时
+	static uint16_t  turnback_time   = 0;//倒转计时
+	static bool Revol_Posit_ifStuck = FALSE;//卡弹判断
 
+	if (Revol_Posit_ifStuck == TRUE)//卡弹后开始倒转计时
+	{
+		turnback_time++;
+		
+		if (turnback_time > Stuck_TurnBack_Time)    //倒转时间够了（次数实际尝试再定）
+		  {
+				Revolver_Angle_Target_Sum = Revolver_Angle_Measure_Sum;//正常旋转,旋转回本来想要它转到的位置
+				Revolver_Target_Sum_temp = Revolver_Angle_Target_Sum;
+				Revol_Posit_ifStuck = FALSE;    //不卡弹判断，卡弹处理完成
+				turnback_time = 0;//倒转时间清零,为下次倒转做准备	
+		  }
+	}
+	else
+	{
+	if ( abs(Revolver_Final_Output)  >= Stuck_Revol_PIDTerm //PID输出过大
+				&& abs(Revolver_Speed_Measure) <= Stuck_Speed_Low  )//速度过低
+	{
+				stuck_time++;//统计卡弹时长
+	}
+	 else
+	 {
+			if (stuck_time > Stuck_SpeedPID_Time)//卡弹时间太久,倒转判断
+			{
+				Revolver_Angle_Target_Sum = Revolver_Angle_Measure_Sum - AN_BULLET ;//拨盘倒转1格  
+				Revolver_Target_Sum_temp = Revolver_Angle_Target_Sum;
+			}
+			  stuck_time = 0;   //卡弹计时清零
+			  Revol_Posit_ifStuck = TRUE; //用来标记倒转计时开启	
+	 }
+	}
+}
 /**
   * @brief  枪管热量限制
   * @param  void
