@@ -226,7 +226,10 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 //Ω∫¬÷µÁª˙TIM8≈‰÷√
 
 TIM_HandleTypeDef TIM8_PWM_Handler;
@@ -268,3 +271,14 @@ void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef *htim)
 	}
 
 }
+<<<<<<< Updated upstream
+=======
+
+
+
+
+
+
+
+
+>>>>>>> Stashed changes

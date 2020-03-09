@@ -34,6 +34,14 @@ void abs_limit(float *a, float ABS_MAX);
 bool FRIC_RcSwitch(void);
 bool IF_FRIC_READY(void);
 
+<<<<<<< Updated upstream
 void shoot_rubber_ctrl(void);  //ÉèÖÃ½ºÂÖ×ªËÙ
+=======
+
+void Rubber_Ctrl(void);
+void shoot_rubber_ctrl(void);
+void Rubber_KeyLevel_Ctrl(void);
+
+>>>>>>> Stashed changes
 
 #endif

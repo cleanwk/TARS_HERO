@@ -22,8 +22,9 @@ float  Revolver_Ramp = AN_BULLET/40;//40ms转一格,一定不能超过50ms
 //累计和
 float Revolver_Angle_Measure_Sum;//拨盘测量角度累计和,用于位置PID
 int16_t Revolver_Angle_Measure_Prev;//上次剩下的累加和角度,用于圈数计算判断
-
-
+/************卡弹************/
+#define Stuck_Revol_PIDTerm   4000//PID输出大于这个数则认为有可能卡弹
+#define Stuck_Speed_Low       60//测量速度低于这个数,则认为有可能卡弹
 /*******************拨盘参数**********************/
 //拨盘测量速度
 int16_t Revolver_Speed_Measure;
@@ -669,9 +670,42 @@ void REVOL_UpdateMotorAngleSum(void)
 	Revolver_Angle_Measure_Prev = Revolver_Angle_Measure;
 }
 
+/*****************************卡弹处理**************************************/
 
 /***********************PID控制**********************/
 
+/**
+  * @brief  位置环式卡弹处理
+  * @param  void
+  * @retval void
+  * @attention  卡住就反转n格
+  */
+void REVOL_PositStuck(void)
+{
+	static bool Revol_Posit_ifStuck = FALSE;//卡弹判断
+	if (Revol_Posit_ifStuck == TRUE)
+	{
+		if(   1    )    //拨盘反转达到目标转速
+		{
+			Revolver_Angle_Target_Sum = Revolver_Angle_Measure_Sum;//正常旋转,旋转回本来想要它转到的位置
+			Revolver_Target_Sum_temp = Revolver_Angle_Target_Sum;
+			Revol_Posit_ifStuck = FALSE;//认为此时不再卡弹了
+		}
+	}
+	else
+	{
+			if ( abs(Revolver_Final_Output)  >= Stuck_Revol_PIDTerm //PID输出过大
+				&& abs(Revolver_Speed_Measure) <= Stuck_Speed_Low  )//速度过低
+			{
+			
+			
+			}
+
+	
+	}
+
+
+}
 /**
   * @brief  速度环PID控制
   * @param  void
