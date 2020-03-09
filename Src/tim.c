@@ -226,10 +226,9 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
 
 
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
+
+
 //胶轮电机TIM8配置
 
 TIM_HandleTypeDef TIM8_PWM_Handler;
@@ -239,18 +238,20 @@ void TIM8_PWM_Init(void)
 {
 		
 		TIM8_PWM_Handler.Instance=TIM8;
-		TIM8_PWM_Handler.Init.CounterMode=TIM_COUNTERMODE_UP;  
-		TIM8_PWM_Handler.Init.Period=20000-1;
-		TIM8_PWM_Handler.Init.Prescaler=167;
+		TIM8_PWM_Handler.Init.CounterMode=TIM_COUNTERMODE_UP;  //向上计数模式
+		TIM8_PWM_Handler.Init.Period=20000-1; //自动重装载值
+		TIM8_PWM_Handler.Init.Prescaler=167;  //定时器分频
 		HAL_TIM_PWM_Init(&TIM8_PWM_Handler);  //PWM的参数配置
 		
 		TIM8_PWM_OC.OCMode=TIM_OCMODE_PWM1;
-		TIM8_PWM_OC.Pulse=1000;
+		TIM8_PWM_OC.Pulse=1000;    //设置比较值
 		TIM8_PWM_OC.OCPolarity=TIM_OCPOLARITY_HIGH;
 		HAL_TIM_PWM_ConfigChannel(&TIM8_PWM_Handler,&TIM8_PWM_OC,TIM_CHANNEL_1);   //CH1 通道一
 		
 		HAL_TIM_PWM_Start(&TIM8_PWM_Handler,TIM_CHANNEL_1);
 }
+
+
 
 void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef *htim)
 {
@@ -271,8 +272,6 @@ void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef *htim)
 	}
 
 }
-<<<<<<< Updated upstream
-=======
 
 
 
@@ -281,4 +280,4 @@ void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef *htim)
 
 
 
->>>>>>> Stashed changes
+

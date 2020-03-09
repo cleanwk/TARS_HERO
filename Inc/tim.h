@@ -59,11 +59,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
   */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
-<<<<<<< Updated upstream
 
-
-=======
->>>>>>> Stashed changes
 //TIM8_PWM µƒ≈‰÷√
 
 #ifndef _TIM_H

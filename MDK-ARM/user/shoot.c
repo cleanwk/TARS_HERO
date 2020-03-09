@@ -358,11 +358,7 @@ float pid_calc(pid_t* pid, float get, float set){
 //      return pid->pid_mode==POSITION_PID ? pid->pos_out : pid->delta_out;
         return pid->pos_out;
 }
-<<<<<<< Updated upstream
 
-
-=======
->>>>>>> Stashed changes
 //ÉèÖÃ½ºÂÖ×ªËÙ
 void shoot_rubber_ctrl(void)
 {
