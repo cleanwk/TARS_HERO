@@ -1,4 +1,6 @@
 #include "revolver.h"
+#include<math.h>
+
 
 
 /******拨盘,控制逻辑与云台类似*********/
@@ -669,6 +671,7 @@ void REVOL_UpdateMotorAngleSum(void)
 	//记录此时电机角度,下一次计算转过角度差用,用来判断是否转过1圈
 	Revolver_Angle_Measure_Prev = Revolver_Angle_Measure;
 }
+
 
 /*****************************卡弹处理**************************************/
 

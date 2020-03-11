@@ -54,11 +54,11 @@ I (..\DSP_LIB\Include\arm_math.h)(0x5776406F)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5776406F)
 I (D:\software\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
 I (.\user\task_gimbal.h)(0x5E48A7B1)
-I (.\user\shoot.h)(0x5E68F98E)
+I (.\user\shoot.h)(0x5E68FC89)
 I (.\user\JY901.H)(0x5E402CA4)
 I (.\user\vision.h)(0x5E457D7A)
 I (.\user\magazine.h)(0x5E4838EA)
-I (.\user\revolver.h)(0x5E665CDF)
+I (.\user\revolver.h)(0x5E68FC89)
 F (../Src/gpio.c)(0x5E187AA0)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\RTSO_HERO\MDK-ARM\RTE-ID:\software\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\software\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\gpio.o --omf_browse code1.1\gpio.crf --depend code1.1\gpio.d)
 I (../Inc/gpio.h)(0x5E43EAD3)
 I (../Inc/main.h)(0x5E44B692)
@@ -173,7 +173,7 @@ I (../Inc/can.h)(0x5DEA2C2F)
 I (../Inc/tim.h)(0x5E68F43C)
 I (../Inc/usart.h)(0x5DF5FACF)
 I (../Inc/gpio.h)(0x5E43EAD3)
-F (../Src/tim.c)(0x5E665CDE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\RTSO_HERO\MDK-ARM\RTE-ID:\software\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\software\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\tim.o --omf_browse code1.1\tim.crf --depend code1.1\tim.d)
+F (../Src/tim.c)(0x5E68FC89)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\RTSO_HERO\MDK-ARM\RTE-ID:\software\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\software\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\tim.o --omf_browse code1.1\tim.crf --depend code1.1\tim.d)
 I (../Inc/tim.h)(0x5E68F43C)
 I (../Inc/main.h)(0x5E44B692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5D67B403)
@@ -957,11 +957,11 @@ I (..\DSP_LIB\Include\arm_math.h)(0x5776406F)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5776406F)
 I (D:\software\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
 I (user\task_gimbal.h)(0x5E48A7B1)
-I (user\shoot.h)(0x5E68F98E)
+I (user\shoot.h)(0x5E68FC89)
 I (user\JY901.H)(0x5E402CA4)
 I (user\vision.h)(0x5E457D7A)
 I (user\magazine.h)(0x5E4838EA)
-I (user\revolver.h)(0x5E665CDF)
+I (user\revolver.h)(0x5E68FC89)
 F (.\user\bsp_can.h)(0x5E538F71)()
 F (.\user\bsp_uart.c)(0x5E4A8312)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\RTSO_HERO\MDK-ARM\RTE-ID:\software\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\software\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\bsp_uart.o --omf_browse code1.1\bsp_uart.crf --depend code1.1\bsp_uart.d)
 I (D:\software\keil\ARM\ARMCC\include\string.h)(0x574E3E26)
@@ -1099,11 +1099,11 @@ I (..\DSP_LIB\Include\arm_math.h)(0x5776406F)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5776406F)
 I (D:\software\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
 I (user\task_gimbal.h)(0x5E48A7B1)
-I (user\shoot.h)(0x5E68F98E)
+I (user\shoot.h)(0x5E68FC89)
 I (user\JY901.H)(0x5E402CA4)
 I (user\vision.h)(0x5E457D7A)
 I (user\magazine.h)(0x5E4838EA)
-I (user\revolver.h)(0x5E665CDF)
+I (user\revolver.h)(0x5E68FC89)
 F (.\user\task_gimbal.c)(0x5E48ABCC)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\RTSO_HERO\MDK-ARM\RTE-ID:\software\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\software\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\task_gimbal.o --omf_browse code1.1\task_gimbal.crf --depend code1.1\task_gimbal.d)
 I (user\task_gimbal.h)(0x5E48A7B1)
 I (user\system.h)(0x5E4838EA)
@@ -1158,15 +1158,15 @@ I (user\Calculate.h)(0x5E452A35)
 I (..\DSP_LIB\Include\arm_math.h)(0x5776406F)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5776406F)
 I (D:\software\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
-I (user\shoot.h)(0x5E68F98E)
+I (user\shoot.h)(0x5E68FC89)
 I (user\JY901.H)(0x5E402CA4)
 I (user\vision.h)(0x5E457D7A)
 I (user\magazine.h)(0x5E4838EA)
-I (user\revolver.h)(0x5E665CDF)
+I (user\revolver.h)(0x5E68FC89)
 F (.\user\task_gimbal.h)(0x5E48A7B1)()
 F (..\DSP_LIB\arm_cortexM4lf_math.lib)(0x5776406E)()
 F (.\user\shoot.c)(0x5E68F4D0)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\RTSO_HERO\MDK-ARM\RTE-ID:\software\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\software\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\shoot.o --omf_browse code1.1\shoot.crf --depend code1.1\shoot.d)
-I (user\shoot.h)(0x5E68F98E)
+I (user\shoot.h)(0x5E68FC89)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5D67B403)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5DEA0965)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5D67B403)
@@ -1223,7 +1223,7 @@ I (user\task_gimbal.h)(0x5E48A7B1)
 I (user\JY901.H)(0x5E402CA4)
 I (user\vision.h)(0x5E457D7A)
 I (user\magazine.h)(0x5E4838EA)
-I (user\revolver.h)(0x5E665CDF)
+I (user\revolver.h)(0x5E68FC89)
 F (.\user\blurry_pid.c)(0x5E5673A5)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\RTSO_HERO\MDK-ARM\RTE-ID:\software\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\software\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\blurry_pid.o --omf_browse code1.1\blurry_pid.crf --depend code1.1\blurry_pid.d)
 I (user\blurry_pid.h)(0x5E5514CE)
 F (.\user\blurry_pid.H)(0x5E5514CE)()
@@ -1282,10 +1282,10 @@ I (..\DSP_LIB\Include\arm_math.h)(0x5776406F)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5776406F)
 I (D:\software\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
 I (user\task_gimbal.h)(0x5E48A7B1)
-I (user\shoot.h)(0x5E68F98E)
+I (user\shoot.h)(0x5E68FC89)
 I (user\vision.h)(0x5E457D7A)
 I (user\magazine.h)(0x5E4838EA)
-I (user\revolver.h)(0x5E665CDF)
+I (user\revolver.h)(0x5E68FC89)
 F (.\user\JY901.H)(0x5E402CA4)()
 F (.\user\system.c)(0x5E4A838E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\RTSO_HERO\MDK-ARM\RTE-ID:\software\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\software\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\system.o --omf_browse code1.1\system.crf --depend code1.1\system.d)
 I (user\system.h)(0x5E4838EA)
@@ -1341,13 +1341,13 @@ I (..\DSP_LIB\Include\arm_math.h)(0x5776406F)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5776406F)
 I (D:\software\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
 I (user\task_gimbal.h)(0x5E48A7B1)
-I (user\shoot.h)(0x5E68F98E)
+I (user\shoot.h)(0x5E68FC89)
 I (user\JY901.H)(0x5E402CA4)
 I (user\vision.h)(0x5E457D7A)
 I (user\magazine.h)(0x5E4838EA)
-I (user\revolver.h)(0x5E665CDF)
+I (user\revolver.h)(0x5E68FC89)
 F (.\user\system.h)(0x5E4838EA)()
-F (.\user\shoot.h)(0x5E68F98E)()
+F (.\user\shoot.h)(0x5E68FC89)()
 F (.\user\vision.c)(0x5E457D7A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\RTSO_HERO\MDK-ARM\RTE-ID:\software\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\software\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\vision.o --omf_browse code1.1\vision.crf --depend code1.1\vision.d)
 I (user\vision.h)(0x5E457D7A)
 I (user\system.h)(0x5E4838EA)
@@ -1403,10 +1403,10 @@ I (..\DSP_LIB\Include\arm_math.h)(0x5776406F)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5776406F)
 I (D:\software\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
 I (user\task_gimbal.h)(0x5E48A7B1)
-I (user\shoot.h)(0x5E68F98E)
+I (user\shoot.h)(0x5E68FC89)
 I (user\JY901.H)(0x5E402CA4)
 I (user\magazine.h)(0x5E4838EA)
-I (user\revolver.h)(0x5E665CDF)
+I (user\revolver.h)(0x5E68FC89)
 F (.\user\vision.h)(0x5E457D7A)()
 F (.\user\Calculate.c)(0x5E452A35)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\RTSO_HERO\MDK-ARM\RTE-ID:\software\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\software\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\calculate.o --omf_browse code1.1\calculate.crf --depend code1.1\calculate.d)
 I (user\Calculate.h)(0x5E452A35)
@@ -1504,13 +1504,13 @@ I (..\DSP_LIB\Include\arm_math.h)(0x5776406F)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5776406F)
 I (D:\software\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
 I (user\task_gimbal.h)(0x5E48A7B1)
-I (user\shoot.h)(0x5E68F98E)
+I (user\shoot.h)(0x5E68FC89)
 I (user\JY901.H)(0x5E402CA4)
 I (user\vision.h)(0x5E457D7A)
-I (user\revolver.h)(0x5E665CDF)
+I (user\revolver.h)(0x5E68FC89)
 F (.\user\magazine.h)(0x5E4838EA)()
-F (.\user\revolver.c)(0x5E68F4A8)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\RTSO_HERO\MDK-ARM\RTE-ID:\software\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\software\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\revolver.o --omf_browse code1.1\revolver.crf --depend code1.1\revolver.d)
-I (user\revolver.h)(0x5E665CDF)
+F (.\user\revolver.c)(0x5E68FCD9)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I .\user -I ..\DSP_LIB\Include -I ..\DSP_LIB-ID:\RTSO_HERO\MDK-ARM\RTE-ID:\software\keil\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-ID:\software\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx -DARM_MATH_CM4 -D__CC_ARM -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o code1.1\revolver.o --omf_browse code1.1\revolver.crf --depend code1.1\revolver.d)
+I (user\revolver.h)(0x5E68FC89)
 I (user\system.h)(0x5E4838EA)
 I (../Inc/main.h)(0x5E44B692)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5D67B403)
@@ -1564,8 +1564,8 @@ I (..\DSP_LIB\Include\arm_math.h)(0x5776406F)
 I (..\DSP_LIB\Include\core_cm4.h)(0x5776406F)
 I (D:\software\keil\ARM\ARMCC\include\math.h)(0x574E3E26)
 I (user\task_gimbal.h)(0x5E48A7B1)
-I (user\shoot.h)(0x5E68F98E)
+I (user\shoot.h)(0x5E68FC89)
 I (user\JY901.H)(0x5E402CA4)
 I (user\vision.h)(0x5E457D7A)
 I (user\magazine.h)(0x5E4838EA)
-F (.\user\revolver.h)(0x5E665CDF)()
+F (.\user\revolver.h)(0x5E68FC89)()
