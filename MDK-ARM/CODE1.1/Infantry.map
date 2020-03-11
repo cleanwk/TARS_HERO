@@ -616,6 +616,10 @@ Section Cross References
     shoot.o(i.FRIC_RcSwitch) refers to shoot.o(.data) for Friction_Switch
     shoot.o(i.IF_FRIC_READY) refers to shoot.o(.bss) for fric_speed
     shoot.o(i.IF_FRIC_READY) refers to shoot.o(.data) for Fric_Speed_Level
+    shoot.o(i.Rubber_Ctrl) refers to system.o(i.SYSTEM_GetRemoteMode) for SYSTEM_GetRemoteMode
+    shoot.o(i.Rubber_Ctrl) refers to shoot.o(i.Rubber_KeyLevel_Ctrl) for Rubber_KeyLevel_Ctrl
+    shoot.o(i.Rubber_KeyLevel_Ctrl) refers to shoot.o(i.shoot_rubber_ctrl) for shoot_rubber_ctrl
+    shoot.o(i.Rubber_KeyLevel_Ctrl) refers to bsp_uart.o(.bss) for rc_t
     shoot.o(i.Shoot_Ctrl) refers to system.o(i.SYSTEM_GetRemoteMode) for SYSTEM_GetRemoteMode
     shoot.o(i.Shoot_Ctrl) refers to shoot.o(i.FRIC_RcSwitch) for FRIC_RcSwitch
     shoot.o(i.Shoot_Ctrl) refers to shoot.o(i.FRIC_KeyLevel_Ctrl) for FRIC_KeyLevel_Ctrl
@@ -755,6 +759,7 @@ Section Cross References
     revolver.o(i.REVOLVER_Rc_Ctrl) refers to revolver.o(i.REVOLVER_Rc_Switch) for REVOLVER_Rc_Switch
     revolver.o(i.REVOLVER_Rc_Ctrl) refers to revolver.o(i.Revolver_Angle_Rest) for Revolver_Angle_Rest
     revolver.o(i.REVOLVER_Rc_Ctrl) refers to calculate.o(i.RAMP_float) for RAMP_float
+    revolver.o(i.REVOLVER_Rc_Ctrl) refers to revolver.o(i.REVOL_PositStuck) for REVOL_PositStuck
     revolver.o(i.REVOLVER_Rc_Ctrl) refers to dflti.o(.text) for __aeabi_i2d
     revolver.o(i.REVOLVER_Rc_Ctrl) refers to dmul.o(.text) for __aeabi_dmul
     revolver.o(i.REVOLVER_Rc_Ctrl) refers to d2f.o(.text) for __aeabi_d2f
@@ -763,6 +768,7 @@ Section Cross References
     revolver.o(i.REVOLVER_Rc_Switch) refers to bsp_uart.o(.bss) for rc_t
     revolver.o(i.REVOLVER_Rc_Switch) refers to revolver.o(.data) for Revolver_Switch
     revolver.o(i.REVOLVER_Rest) refers to revolver.o(.data) for Key_ShootNum
+    revolver.o(i.REVOL_PositStuck) refers to revolver.o(.data) for Revol_Posit_ifStuck
     revolver.o(i.REVOL_PositionLoop) refers to revolver.o(i.REVOL_UpdateMotorAngleSum) for REVOL_UpdateMotorAngleSum
     revolver.o(i.REVOL_PositionLoop) refers to calculate.o(i.constrain_float) for constrain_float
     revolver.o(i.REVOL_PositionLoop) refers to revolver.o(.data) for Revolver_Angle_Target_Sum
@@ -1300,6 +1306,8 @@ Removing Unused input sections from the image.
     Removing shoot.o(.rev16_text), (4 bytes).
     Removing shoot.o(.revsh_text), (4 bytes).
     Removing shoot.o(.rrx_text), (6 bytes).
+    Removing shoot.o(i.Rubber_Ctrl), (20 bytes).
+    Removing shoot.o(i.Rubber_KeyLevel_Ctrl), (20 bytes).
     Removing shoot.o(i.shoot_StopMotor), (2 bytes).
     Removing shoot.o(i.shoot_rubber_ctrl), (16 bytes).
     Removing blurry_pid.o(i.CalcMembership), (1136 bytes).
@@ -1362,7 +1370,7 @@ Removing Unused input sections from the image.
     Removing dadd.o(.text), (334 bytes).
     Removing ddiv.o(.text), (222 bytes).
 
-516 unused section(s) (total 38402 bytes) removed from the image.
+518 unused section(s) (total 38442 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1400,30 +1408,30 @@ Image Symbol Table
     ../Src/usart.c                           0x00000000   Number         0  usart.o ABSOLUTE
     ../clib/../cmprslib/zerorunl2.c          0x00000000   Number         0  __dczerorl2.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
     ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
     ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
     ../fplib/microlib/d2f.c                  0x00000000   Number         0  d2f.o ABSOLUTE
     ../fplib/microlib/f2d.c                  0x00000000   Number         0  f2d.o ABSOLUTE
     ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
     ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
-    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
     ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
     ../fplib/microlib/fpflt.c                0x00000000   Number         0  dflti.o ABSOLUTE
     ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
     ../mathlib/fabs.c                        0x00000000   Number         0  fabs.o ABSOLUTE
@@ -1656,105 +1664,106 @@ Image Symbol Table
     i.REVOLVER_KeySpeedCtrl                  0x08005ba4   Section        0  revolver.o(i.REVOLVER_KeySpeedCtrl)
     i.REVOLVER_Key_Ctrl                      0x08005ba8   Section        0  revolver.o(i.REVOLVER_Key_Ctrl)
     i.REVOLVER_Rc_Ctrl                       0x08005c1c   Section        0  revolver.o(i.REVOLVER_Rc_Ctrl)
-    i.REVOLVER_Rc_Switch                     0x08005d3c   Section        0  revolver.o(i.REVOLVER_Rc_Switch)
-    i.REVOLVER_Rest                          0x08005d94   Section        0  revolver.o(i.REVOLVER_Rest)
-    i.REVOL_PositionLoop                     0x08005e28   Section        0  revolver.o(i.REVOL_PositionLoop)
-    i.REVOL_SpeedLoop                        0x08005f24   Section        0  revolver.o(i.REVOL_SpeedLoop)
-    i.REVOL_UpdateMotorAngleSum              0x08005fe8   Section        0  revolver.o(i.REVOL_UpdateMotorAngleSum)
-    i.RampInc_float                          0x080060c4   Section        0  calculate.o(i.RampInc_float)
-    i.Revolver_Angle_Rest                    0x08006158   Section        0  revolver.o(i.Revolver_Angle_Rest)
-    i.Revolver_Heat_Limit                    0x080061b8   Section        0  revolver.o(i.Revolver_Heat_Limit)
-    i.SHOOT_HIGHTF_LOWS_Ctrl                 0x080061bc   Section        0  revolver.o(i.SHOOT_HIGHTF_LOWS_Ctrl)
-    i.SHOOT_MIDF_HIGHTS_Ctrl                 0x080061fc   Section        0  revolver.o(i.SHOOT_MIDF_HIGHTS_Ctrl)
-    i.SHOOT_NORMAL_Ctrl                      0x08006240   Section        0  revolver.o(i.SHOOT_NORMAL_Ctrl)
-    i.SHOOT_SINGLE_Ctrl                      0x08006394   Section        0  revolver.o(i.SHOOT_SINGLE_Ctrl)
-    i.SHOOT_TRIPLE_Ctrl                      0x080063e4   Section        0  revolver.o(i.SHOOT_TRIPLE_Ctrl)
-    i.SVC_Handler                            0x08006488   Section        0  stm32f4xx_it.o(i.SVC_Handler)
-    i.SYSTEM_GetRemoteMode                   0x0800648c   Section        0  system.o(i.SYSTEM_GetRemoteMode)
-    i.SYSTEM_Reset                           0x08006498   Section        0  system.o(i.SYSTEM_Reset)
-    i.Shoot_Ctrl                             0x080064a4   Section        0  shoot.o(i.Shoot_Ctrl)
-    i.SysTick_Handler                        0x08006500   Section        0  stm32f4xx_it.o(i.SysTick_Handler)
-    i.SystemClock_Config                     0x08006508   Section        0  system.o(i.SystemClock_Config)
-    i.SystemInit                             0x080065bc   Section        0  system_stm32f4xx.o(i.SystemInit)
-    i.System_Run                             0x08006620   Section        0  system.o(i.System_Run)
-    i.System_Stop                            0x08006648   Section        0  system.o(i.System_Stop)
-    i.TIM3_IRQHandler                        0x0800668c   Section        0  user_tim.o(i.TIM3_IRQHandler)
-    i.TIM4_IRQHandler                        0x08006694   Section        0  user_tim.o(i.TIM4_IRQHandler)
-    i.TIM_Base_SetConfig                     0x080066a4   Section        0  stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig)
-    i.TIM_CCxChannelCmd                      0x0800677c   Section        0  stm32f4xx_hal_tim.o(i.TIM_CCxChannelCmd)
-    i.TIM_ETR_SetConfig                      0x0800679e   Section        0  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
-    i.TIM_ITRx_SetConfig                     0x080067b4   Section        0  stm32f4xx_hal_tim.o(i.TIM_ITRx_SetConfig)
-    TIM_ITRx_SetConfig                       0x080067b5   Thumb Code    18  stm32f4xx_hal_tim.o(i.TIM_ITRx_SetConfig)
-    i.TIM_OC1_SetConfig                      0x080067c8   Section        0  stm32f4xx_hal_tim.o(i.TIM_OC1_SetConfig)
-    TIM_OC1_SetConfig                        0x080067c9   Thumb Code   104  stm32f4xx_hal_tim.o(i.TIM_OC1_SetConfig)
-    i.TIM_OC2_SetConfig                      0x08006838   Section        0  stm32f4xx_hal_tim.o(i.TIM_OC2_SetConfig)
-    i.TIM_OC3_SetConfig                      0x080068b4   Section        0  stm32f4xx_hal_tim.o(i.TIM_OC3_SetConfig)
-    TIM_OC3_SetConfig                        0x080068b5   Thumb Code   112  stm32f4xx_hal_tim.o(i.TIM_OC3_SetConfig)
-    i.TIM_OC4_SetConfig                      0x0800692c   Section        0  stm32f4xx_hal_tim.o(i.TIM_OC4_SetConfig)
-    TIM_OC4_SetConfig                        0x0800692d   Thumb Code    74  stm32f4xx_hal_tim.o(i.TIM_OC4_SetConfig)
-    i.TIM_TI1_ConfigInputStage               0x08006980   Section        0  stm32f4xx_hal_tim.o(i.TIM_TI1_ConfigInputStage)
-    TIM_TI1_ConfigInputStage                 0x08006981   Thumb Code    38  stm32f4xx_hal_tim.o(i.TIM_TI1_ConfigInputStage)
-    i.TIM_TI2_ConfigInputStage               0x080069a6   Section        0  stm32f4xx_hal_tim.o(i.TIM_TI2_ConfigInputStage)
-    TIM_TI2_ConfigInputStage                 0x080069a7   Thumb Code    40  stm32f4xx_hal_tim.o(i.TIM_TI2_ConfigInputStage)
-    i.Target_Speed_Calc                      0x080069d0   Section        0  task_gimbal.o(i.Target_Speed_Calc)
-    i.Task_Dispatch_tim                      0x08006a30   Section        0  system.o(i.Task_Dispatch_tim)
-    i.Task_Revolver                          0x08006ae8   Section        0  revolver.o(i.Task_Revolver)
-    i.Task_error                             0x08006b7c   Section        0  system.o(i.Task_error)
-    i.UART_DMAAbortOnError                   0x08006b90   Section        0  stm32f4xx_hal_uart.o(i.UART_DMAAbortOnError)
-    UART_DMAAbortOnError                     0x08006b91   Thumb Code    20  stm32f4xx_hal_uart.o(i.UART_DMAAbortOnError)
-    i.UART_DMAError                          0x08006ba4   Section        0  stm32f4xx_hal_uart.o(i.UART_DMAError)
-    UART_DMAError                            0x08006ba5   Thumb Code    80  stm32f4xx_hal_uart.o(i.UART_DMAError)
-    i.UART_DMAReceiveCplt                    0x08006bf4   Section        0  stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt)
-    UART_DMAReceiveCplt                      0x08006bf5   Thumb Code    70  stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt)
-    i.UART_DMARxHalfCplt                     0x08006c3a   Section        0  stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt)
-    UART_DMARxHalfCplt                       0x08006c3b   Thumb Code    14  stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt)
-    i.UART_EndRxTransfer                     0x08006c48   Section        0  stm32f4xx_hal_uart.o(i.UART_EndRxTransfer)
-    UART_EndRxTransfer                       0x08006c49   Thumb Code    32  stm32f4xx_hal_uart.o(i.UART_EndRxTransfer)
-    i.UART_EndTransmit_IT                    0x08006c68   Section        0  stm32f4xx_hal_uart.o(i.UART_EndTransmit_IT)
-    UART_EndTransmit_IT                      0x08006c69   Thumb Code    32  stm32f4xx_hal_uart.o(i.UART_EndTransmit_IT)
-    i.UART_EndTxTransfer                     0x08006c88   Section        0  stm32f4xx_hal_uart.o(i.UART_EndTxTransfer)
-    UART_EndTxTransfer                       0x08006c89   Thumb Code    20  stm32f4xx_hal_uart.o(i.UART_EndTxTransfer)
-    i.UART_Receive_IT                        0x08006c9c   Section        0  stm32f4xx_hal_uart.o(i.UART_Receive_IT)
-    UART_Receive_IT                          0x08006c9d   Thumb Code   166  stm32f4xx_hal_uart.o(i.UART_Receive_IT)
-    i.UART_SetConfig                         0x08006d44   Section        0  stm32f4xx_hal_uart.o(i.UART_SetConfig)
-    UART_SetConfig                           0x08006d45   Thumb Code   864  stm32f4xx_hal_uart.o(i.UART_SetConfig)
-    i.UART_Transmit_IT                       0x080070ac   Section        0  stm32f4xx_hal_uart.o(i.UART_Transmit_IT)
-    UART_Transmit_IT                         0x080070ad   Thumb Code   104  stm32f4xx_hal_uart.o(i.UART_Transmit_IT)
-    i.USART1_IRQHandler                      0x08007114   Section        0  stm32f4xx_it.o(i.USART1_IRQHandler)
-    i.USART2_IRQHandler                      0x08007128   Section        0  stm32f4xx_it.o(i.USART2_IRQHandler)
-    i.USART6_IRQHandler                      0x08007138   Section        0  stm32f4xx_it.o(i.USART6_IRQHandler)
-    i.UsageFault_Handler                     0x08007148   Section        0  stm32f4xx_it.o(i.UsageFault_Handler)
-    i.__NVIC_GetPriorityGrouping             0x0800714c   Section        0  stm32f4xx_hal_cortex.o(i.__NVIC_GetPriorityGrouping)
-    __NVIC_GetPriorityGrouping               0x0800714d   Thumb Code    10  stm32f4xx_hal_cortex.o(i.__NVIC_GetPriorityGrouping)
-    i.__NVIC_SetPriority                     0x0800715c   Section        0  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x0800715d   Thumb Code    32  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
-    i.__hardfp_fabs                          0x08007184   Section        0  fabs.o(i.__hardfp_fabs)
-    i.__scatterload_copy                     0x08007198   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x080071a6   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x080071a8   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.abs_limit                              0x080071b6   Section        0  shoot.o(i.abs_limit)
-    i.constrain_float                        0x080071e4   Section        0  calculate.o(i.constrain_float)
-    i.dbus_uart_init                         0x08007210   Section        0  bsp_uart.o(i.dbus_uart_init)
-    i.dma_current_data_counter               0x08007250   Section        0  bsp_uart.o(i.dma_current_data_counter)
-    i.drv_can_init                           0x08007258   Section        0  bsp_can.o(i.drv_can_init)
-    i.fric_set_output                        0x080072c4   Section        0  shoot.o(i.fric_set_output)
-    i.init_system                            0x08007354   Section        0  system.o(i.init_system)
-    i.kalman_filter_calc                     0x080073f0   Section        0  calculate.o(i.kalman_filter_calc)
-    i.main                                   0x08007568   Section        0  main.o(i.main)
-    i.pid_calc                               0x08007578   Section        0  shoot.o(i.pid_calc)
-    i.rc_callback_handler                    0x08007616   Section        0  bsp_uart.o(i.rc_callback_handler)
-    i.sent_gimbal_to_down                    0x08007738   Section        0  task_gimbal.o(i.sent_gimbal_to_down)
-    i.shoot_fric_ctrl                        0x0800776c   Section        0  shoot.o(i.shoot_fric_ctrl)
-    i.shoot_init                             0x0800782c   Section        0  shoot.o(i.shoot_init)
-    i.task_PID_out                           0x080078a0   Section        0  task_gimbal.o(i.task_PID_out)
-    i.uart_receive_dma_no_it                 0x080078f0   Section        0  bsp_uart.o(i.uart_receive_dma_no_it)
-    uart_receive_dma_no_it                   0x080078f1   Thumb Code    72  bsp_uart.o(i.uart_receive_dma_no_it)
-    i.uart_receive_handler                   0x08007938   Section        0  bsp_uart.o(i.uart_receive_handler)
-    i.uart_rx_idle_callback                  0x0800795c   Section        0  bsp_uart.o(i.uart_rx_idle_callback)
-    uart_rx_idle_callback                    0x0800795d   Thumb Code    98  bsp_uart.o(i.uart_rx_idle_callback)
-    .constdata                               0x080079cc   Section        8  stm32f4xx_hal_dma.o(.constdata)
-    flagBitshiftOffset                       0x080079cc   Data           8  stm32f4xx_hal_dma.o(.constdata)
-    .constdata                               0x080079d4   Section       24  system_stm32f4xx.o(.constdata)
+    i.REVOLVER_Rc_Switch                     0x08005d40   Section        0  revolver.o(i.REVOLVER_Rc_Switch)
+    i.REVOLVER_Rest                          0x08005d98   Section        0  revolver.o(i.REVOLVER_Rest)
+    i.REVOL_PositStuck                       0x08005e2c   Section        0  revolver.o(i.REVOL_PositStuck)
+    i.REVOL_PositionLoop                     0x08005f00   Section        0  revolver.o(i.REVOL_PositionLoop)
+    i.REVOL_SpeedLoop                        0x08005ffc   Section        0  revolver.o(i.REVOL_SpeedLoop)
+    i.REVOL_UpdateMotorAngleSum              0x080060c0   Section        0  revolver.o(i.REVOL_UpdateMotorAngleSum)
+    i.RampInc_float                          0x0800619c   Section        0  calculate.o(i.RampInc_float)
+    i.Revolver_Angle_Rest                    0x08006230   Section        0  revolver.o(i.Revolver_Angle_Rest)
+    i.Revolver_Heat_Limit                    0x08006290   Section        0  revolver.o(i.Revolver_Heat_Limit)
+    i.SHOOT_HIGHTF_LOWS_Ctrl                 0x08006294   Section        0  revolver.o(i.SHOOT_HIGHTF_LOWS_Ctrl)
+    i.SHOOT_MIDF_HIGHTS_Ctrl                 0x080062d4   Section        0  revolver.o(i.SHOOT_MIDF_HIGHTS_Ctrl)
+    i.SHOOT_NORMAL_Ctrl                      0x08006318   Section        0  revolver.o(i.SHOOT_NORMAL_Ctrl)
+    i.SHOOT_SINGLE_Ctrl                      0x0800646c   Section        0  revolver.o(i.SHOOT_SINGLE_Ctrl)
+    i.SHOOT_TRIPLE_Ctrl                      0x080064bc   Section        0  revolver.o(i.SHOOT_TRIPLE_Ctrl)
+    i.SVC_Handler                            0x08006560   Section        0  stm32f4xx_it.o(i.SVC_Handler)
+    i.SYSTEM_GetRemoteMode                   0x08006564   Section        0  system.o(i.SYSTEM_GetRemoteMode)
+    i.SYSTEM_Reset                           0x08006570   Section        0  system.o(i.SYSTEM_Reset)
+    i.Shoot_Ctrl                             0x0800657c   Section        0  shoot.o(i.Shoot_Ctrl)
+    i.SysTick_Handler                        0x080065d8   Section        0  stm32f4xx_it.o(i.SysTick_Handler)
+    i.SystemClock_Config                     0x080065e0   Section        0  system.o(i.SystemClock_Config)
+    i.SystemInit                             0x08006694   Section        0  system_stm32f4xx.o(i.SystemInit)
+    i.System_Run                             0x080066f8   Section        0  system.o(i.System_Run)
+    i.System_Stop                            0x08006720   Section        0  system.o(i.System_Stop)
+    i.TIM3_IRQHandler                        0x08006764   Section        0  user_tim.o(i.TIM3_IRQHandler)
+    i.TIM4_IRQHandler                        0x0800676c   Section        0  user_tim.o(i.TIM4_IRQHandler)
+    i.TIM_Base_SetConfig                     0x0800677c   Section        0  stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig)
+    i.TIM_CCxChannelCmd                      0x08006854   Section        0  stm32f4xx_hal_tim.o(i.TIM_CCxChannelCmd)
+    i.TIM_ETR_SetConfig                      0x08006876   Section        0  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
+    i.TIM_ITRx_SetConfig                     0x0800688c   Section        0  stm32f4xx_hal_tim.o(i.TIM_ITRx_SetConfig)
+    TIM_ITRx_SetConfig                       0x0800688d   Thumb Code    18  stm32f4xx_hal_tim.o(i.TIM_ITRx_SetConfig)
+    i.TIM_OC1_SetConfig                      0x080068a0   Section        0  stm32f4xx_hal_tim.o(i.TIM_OC1_SetConfig)
+    TIM_OC1_SetConfig                        0x080068a1   Thumb Code   104  stm32f4xx_hal_tim.o(i.TIM_OC1_SetConfig)
+    i.TIM_OC2_SetConfig                      0x08006910   Section        0  stm32f4xx_hal_tim.o(i.TIM_OC2_SetConfig)
+    i.TIM_OC3_SetConfig                      0x0800698c   Section        0  stm32f4xx_hal_tim.o(i.TIM_OC3_SetConfig)
+    TIM_OC3_SetConfig                        0x0800698d   Thumb Code   112  stm32f4xx_hal_tim.o(i.TIM_OC3_SetConfig)
+    i.TIM_OC4_SetConfig                      0x08006a04   Section        0  stm32f4xx_hal_tim.o(i.TIM_OC4_SetConfig)
+    TIM_OC4_SetConfig                        0x08006a05   Thumb Code    74  stm32f4xx_hal_tim.o(i.TIM_OC4_SetConfig)
+    i.TIM_TI1_ConfigInputStage               0x08006a58   Section        0  stm32f4xx_hal_tim.o(i.TIM_TI1_ConfigInputStage)
+    TIM_TI1_ConfigInputStage                 0x08006a59   Thumb Code    38  stm32f4xx_hal_tim.o(i.TIM_TI1_ConfigInputStage)
+    i.TIM_TI2_ConfigInputStage               0x08006a7e   Section        0  stm32f4xx_hal_tim.o(i.TIM_TI2_ConfigInputStage)
+    TIM_TI2_ConfigInputStage                 0x08006a7f   Thumb Code    40  stm32f4xx_hal_tim.o(i.TIM_TI2_ConfigInputStage)
+    i.Target_Speed_Calc                      0x08006aa8   Section        0  task_gimbal.o(i.Target_Speed_Calc)
+    i.Task_Dispatch_tim                      0x08006b08   Section        0  system.o(i.Task_Dispatch_tim)
+    i.Task_Revolver                          0x08006bc0   Section        0  revolver.o(i.Task_Revolver)
+    i.Task_error                             0x08006c54   Section        0  system.o(i.Task_error)
+    i.UART_DMAAbortOnError                   0x08006c68   Section        0  stm32f4xx_hal_uart.o(i.UART_DMAAbortOnError)
+    UART_DMAAbortOnError                     0x08006c69   Thumb Code    20  stm32f4xx_hal_uart.o(i.UART_DMAAbortOnError)
+    i.UART_DMAError                          0x08006c7c   Section        0  stm32f4xx_hal_uart.o(i.UART_DMAError)
+    UART_DMAError                            0x08006c7d   Thumb Code    80  stm32f4xx_hal_uart.o(i.UART_DMAError)
+    i.UART_DMAReceiveCplt                    0x08006ccc   Section        0  stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt)
+    UART_DMAReceiveCplt                      0x08006ccd   Thumb Code    70  stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt)
+    i.UART_DMARxHalfCplt                     0x08006d12   Section        0  stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt)
+    UART_DMARxHalfCplt                       0x08006d13   Thumb Code    14  stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt)
+    i.UART_EndRxTransfer                     0x08006d20   Section        0  stm32f4xx_hal_uart.o(i.UART_EndRxTransfer)
+    UART_EndRxTransfer                       0x08006d21   Thumb Code    32  stm32f4xx_hal_uart.o(i.UART_EndRxTransfer)
+    i.UART_EndTransmit_IT                    0x08006d40   Section        0  stm32f4xx_hal_uart.o(i.UART_EndTransmit_IT)
+    UART_EndTransmit_IT                      0x08006d41   Thumb Code    32  stm32f4xx_hal_uart.o(i.UART_EndTransmit_IT)
+    i.UART_EndTxTransfer                     0x08006d60   Section        0  stm32f4xx_hal_uart.o(i.UART_EndTxTransfer)
+    UART_EndTxTransfer                       0x08006d61   Thumb Code    20  stm32f4xx_hal_uart.o(i.UART_EndTxTransfer)
+    i.UART_Receive_IT                        0x08006d74   Section        0  stm32f4xx_hal_uart.o(i.UART_Receive_IT)
+    UART_Receive_IT                          0x08006d75   Thumb Code   166  stm32f4xx_hal_uart.o(i.UART_Receive_IT)
+    i.UART_SetConfig                         0x08006e1c   Section        0  stm32f4xx_hal_uart.o(i.UART_SetConfig)
+    UART_SetConfig                           0x08006e1d   Thumb Code   864  stm32f4xx_hal_uart.o(i.UART_SetConfig)
+    i.UART_Transmit_IT                       0x08007184   Section        0  stm32f4xx_hal_uart.o(i.UART_Transmit_IT)
+    UART_Transmit_IT                         0x08007185   Thumb Code   104  stm32f4xx_hal_uart.o(i.UART_Transmit_IT)
+    i.USART1_IRQHandler                      0x080071ec   Section        0  stm32f4xx_it.o(i.USART1_IRQHandler)
+    i.USART2_IRQHandler                      0x08007200   Section        0  stm32f4xx_it.o(i.USART2_IRQHandler)
+    i.USART6_IRQHandler                      0x08007210   Section        0  stm32f4xx_it.o(i.USART6_IRQHandler)
+    i.UsageFault_Handler                     0x08007220   Section        0  stm32f4xx_it.o(i.UsageFault_Handler)
+    i.__NVIC_GetPriorityGrouping             0x08007224   Section        0  stm32f4xx_hal_cortex.o(i.__NVIC_GetPriorityGrouping)
+    __NVIC_GetPriorityGrouping               0x08007225   Thumb Code    10  stm32f4xx_hal_cortex.o(i.__NVIC_GetPriorityGrouping)
+    i.__NVIC_SetPriority                     0x08007234   Section        0  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x08007235   Thumb Code    32  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
+    i.__hardfp_fabs                          0x0800725c   Section        0  fabs.o(i.__hardfp_fabs)
+    i.__scatterload_copy                     0x08007270   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0800727e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08007280   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.abs_limit                              0x0800728e   Section        0  shoot.o(i.abs_limit)
+    i.constrain_float                        0x080072bc   Section        0  calculate.o(i.constrain_float)
+    i.dbus_uart_init                         0x080072e8   Section        0  bsp_uart.o(i.dbus_uart_init)
+    i.dma_current_data_counter               0x08007328   Section        0  bsp_uart.o(i.dma_current_data_counter)
+    i.drv_can_init                           0x08007330   Section        0  bsp_can.o(i.drv_can_init)
+    i.fric_set_output                        0x0800739c   Section        0  shoot.o(i.fric_set_output)
+    i.init_system                            0x0800742c   Section        0  system.o(i.init_system)
+    i.kalman_filter_calc                     0x080074c8   Section        0  calculate.o(i.kalman_filter_calc)
+    i.main                                   0x08007640   Section        0  main.o(i.main)
+    i.pid_calc                               0x08007650   Section        0  shoot.o(i.pid_calc)
+    i.rc_callback_handler                    0x080076ee   Section        0  bsp_uart.o(i.rc_callback_handler)
+    i.sent_gimbal_to_down                    0x08007810   Section        0  task_gimbal.o(i.sent_gimbal_to_down)
+    i.shoot_fric_ctrl                        0x08007844   Section        0  shoot.o(i.shoot_fric_ctrl)
+    i.shoot_init                             0x08007904   Section        0  shoot.o(i.shoot_init)
+    i.task_PID_out                           0x08007978   Section        0  task_gimbal.o(i.task_PID_out)
+    i.uart_receive_dma_no_it                 0x080079c8   Section        0  bsp_uart.o(i.uart_receive_dma_no_it)
+    uart_receive_dma_no_it                   0x080079c9   Thumb Code    72  bsp_uart.o(i.uart_receive_dma_no_it)
+    i.uart_receive_handler                   0x08007a10   Section        0  bsp_uart.o(i.uart_receive_handler)
+    i.uart_rx_idle_callback                  0x08007a34   Section        0  bsp_uart.o(i.uart_rx_idle_callback)
+    uart_rx_idle_callback                    0x08007a35   Thumb Code    98  bsp_uart.o(i.uart_rx_idle_callback)
+    .constdata                               0x08007aa4   Section        8  stm32f4xx_hal_dma.o(.constdata)
+    flagBitshiftOffset                       0x08007aa4   Data           8  stm32f4xx_hal_dma.o(.constdata)
+    .constdata                               0x08007aac   Section       24  system_stm32f4xx.o(.constdata)
     .data                                    0x20000000   Section        4  can.o(.data)
     HAL_RCC_CAN1_CLK_ENABLED                 0x20000000   Data           4  can.o(.data)
     .data                                    0x20000004   Section        9  stm32f4xx_hal.o(.data)
@@ -1795,26 +1804,29 @@ Image Symbol Table
     Maga_tick                                0x200003d7   Data           1  magazine.o(.data)
     Maga_Key_state                           0x200003d8   Data           2  magazine.o(.data)
     Maga_time                                0x200003da   Data           4  magazine.o(.data)
-    .data                                    0x200003e0   Section      140  revolver.o(.data)
+    .data                                    0x200003e0   Section      145  revolver.o(.data)
     shoot_left_time                          0x20000454   Data           4  revolver.o(.data)
     RespondTime                              0x20000458   Data           4  revolver.o(.data)
     RespondTime                              0x2000045c   Data           4  revolver.o(.data)
     RespondTime                              0x20000460   Data           4  revolver.o(.data)
     RespondTime_Stop                         0x20000464   Data           4  revolver.o(.data)
     RespondTime_MobiPre                      0x20000468   Data           4  revolver.o(.data)
-    .bss                                     0x2000046c   Section       80  can.o(.bss)
-    .bss                                     0x200004bc   Section      156  tim.o(.bss)
-    .bss                                     0x20000558   Section      576  usart.o(.bss)
-    .bss                                     0x20000798   Section      108  bsp_can.o(.bss)
-    .bss                                     0x20000804   Section       40  bsp_uart.o(.bss)
-    .bss                                     0x2000082c   Section      128  user_tim.o(.bss)
-    .bss                                     0x200008ac   Section     1164  task_gimbal.o(.bss)
-    yaw_speed_error                          0x20000d28   Data          16  task_gimbal.o(.bss)
-    .bss                                     0x20000d38   Section      144  shoot.o(.bss)
-    .bss                                     0x20000dc8   Section       22  system.o(.bss)
-    .bss                                     0x20000de0   Section       32  vision.o(.bss)
-    .bss                                     0x20000e00   Section       36  revolver.o(.bss)
-    STACK                                    0x20000e28   Section     1024  startup_stm32f427xx.o(STACK)
+    stuck_time                               0x2000046c   Data           2  revolver.o(.data)
+    turnback_time                            0x2000046e   Data           2  revolver.o(.data)
+    Revol_Posit_ifStuck                      0x20000470   Data           1  revolver.o(.data)
+    .bss                                     0x20000474   Section       80  can.o(.bss)
+    .bss                                     0x200004c4   Section      156  tim.o(.bss)
+    .bss                                     0x20000560   Section      576  usart.o(.bss)
+    .bss                                     0x200007a0   Section      108  bsp_can.o(.bss)
+    .bss                                     0x2000080c   Section       40  bsp_uart.o(.bss)
+    .bss                                     0x20000834   Section      128  user_tim.o(.bss)
+    .bss                                     0x200008b4   Section     1164  task_gimbal.o(.bss)
+    yaw_speed_error                          0x20000d30   Data          16  task_gimbal.o(.bss)
+    .bss                                     0x20000d40   Section      144  shoot.o(.bss)
+    .bss                                     0x20000dd0   Section       22  system.o(.bss)
+    .bss                                     0x20000de8   Section       32  vision.o(.bss)
+    .bss                                     0x20000e08   Section       36  revolver.o(.bss)
+    STACK                                    0x20000e30   Section     1024  startup_stm32f427xx.o(STACK)
 
     Global Symbols
 
@@ -2067,67 +2079,68 @@ Image Symbol Table
     REVOLVER_KeyPosiCtrl                     0x08005b15   Thumb Code   112  revolver.o(i.REVOLVER_KeyPosiCtrl)
     REVOLVER_KeySpeedCtrl                    0x08005ba5   Thumb Code     2  revolver.o(i.REVOLVER_KeySpeedCtrl)
     REVOLVER_Key_Ctrl                        0x08005ba9   Thumb Code   106  revolver.o(i.REVOLVER_Key_Ctrl)
-    REVOLVER_Rc_Ctrl                         0x08005c1d   Thumb Code   234  revolver.o(i.REVOLVER_Rc_Ctrl)
-    REVOLVER_Rc_Switch                       0x08005d3d   Thumb Code    78  revolver.o(i.REVOLVER_Rc_Switch)
-    REVOLVER_Rest                            0x08005d95   Thumb Code   108  revolver.o(i.REVOLVER_Rest)
-    REVOL_PositionLoop                       0x08005e29   Thumb Code   208  revolver.o(i.REVOL_PositionLoop)
-    REVOL_SpeedLoop                          0x08005f25   Thumb Code   158  revolver.o(i.REVOL_SpeedLoop)
-    REVOL_UpdateMotorAngleSum                0x08005fe9   Thumb Code   208  revolver.o(i.REVOL_UpdateMotorAngleSum)
-    RampInc_float                            0x080060c5   Thumb Code   142  calculate.o(i.RampInc_float)
-    Revolver_Angle_Rest                      0x08006159   Thumb Code    70  revolver.o(i.Revolver_Angle_Rest)
-    Revolver_Heat_Limit                      0x080061b9   Thumb Code     4  revolver.o(i.Revolver_Heat_Limit)
-    SHOOT_HIGHTF_LOWS_Ctrl                   0x080061bd   Thumb Code    48  revolver.o(i.SHOOT_HIGHTF_LOWS_Ctrl)
-    SHOOT_MIDF_HIGHTS_Ctrl                   0x080061fd   Thumb Code    50  revolver.o(i.SHOOT_MIDF_HIGHTS_Ctrl)
-    SHOOT_NORMAL_Ctrl                        0x08006241   Thumb Code   298  revolver.o(i.SHOOT_NORMAL_Ctrl)
-    SHOOT_SINGLE_Ctrl                        0x08006395   Thumb Code    58  revolver.o(i.SHOOT_SINGLE_Ctrl)
-    SHOOT_TRIPLE_Ctrl                        0x080063e5   Thumb Code   142  revolver.o(i.SHOOT_TRIPLE_Ctrl)
-    SVC_Handler                              0x08006489   Thumb Code     2  stm32f4xx_it.o(i.SVC_Handler)
-    SYSTEM_GetRemoteMode                     0x0800648d   Thumb Code     6  system.o(i.SYSTEM_GetRemoteMode)
-    SYSTEM_Reset                             0x08006499   Thumb Code     8  system.o(i.SYSTEM_Reset)
-    Shoot_Ctrl                               0x080064a5   Thumb Code    78  shoot.o(i.Shoot_Ctrl)
-    SysTick_Handler                          0x08006501   Thumb Code     8  stm32f4xx_it.o(i.SysTick_Handler)
-    SystemClock_Config                       0x08006509   Thumb Code   172  system.o(i.SystemClock_Config)
-    SystemInit                               0x080065bd   Thumb Code    82  system_stm32f4xx.o(i.SystemInit)
-    System_Run                               0x08006621   Thumb Code    34  system.o(i.System_Run)
-    System_Stop                              0x08006649   Thumb Code    64  system.o(i.System_Stop)
-    TIM3_IRQHandler                          0x0800668d   Thumb Code     8  user_tim.o(i.TIM3_IRQHandler)
-    TIM4_IRQHandler                          0x08006695   Thumb Code    12  user_tim.o(i.TIM4_IRQHandler)
-    TIM_Base_SetConfig                       0x080066a5   Thumb Code   170  stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig)
-    TIM_CCxChannelCmd                        0x0800677d   Thumb Code    34  stm32f4xx_hal_tim.o(i.TIM_CCxChannelCmd)
-    TIM_ETR_SetConfig                        0x0800679f   Thumb Code    22  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
-    TIM_OC2_SetConfig                        0x08006839   Thumb Code   114  stm32f4xx_hal_tim.o(i.TIM_OC2_SetConfig)
-    Target_Speed_Calc                        0x080069d1   Thumb Code    92  task_gimbal.o(i.Target_Speed_Calc)
-    Task_Dispatch_tim                        0x08006a31   Thumb Code   162  system.o(i.Task_Dispatch_tim)
-    Task_Revolver                            0x08006ae9   Thumb Code   126  revolver.o(i.Task_Revolver)
-    Task_error                               0x08006b7d   Thumb Code    14  system.o(i.Task_error)
-    USART1_IRQHandler                        0x08007115   Thumb Code    16  stm32f4xx_it.o(i.USART1_IRQHandler)
-    USART2_IRQHandler                        0x08007129   Thumb Code    10  stm32f4xx_it.o(i.USART2_IRQHandler)
-    USART6_IRQHandler                        0x08007139   Thumb Code    10  stm32f4xx_it.o(i.USART6_IRQHandler)
-    UsageFault_Handler                       0x08007149   Thumb Code     4  stm32f4xx_it.o(i.UsageFault_Handler)
-    __hardfp_fabs                            0x08007185   Thumb Code    20  fabs.o(i.__hardfp_fabs)
-    __scatterload_copy                       0x08007199   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x080071a7   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x080071a9   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    abs_limit                                0x080071b7   Thumb Code    46  shoot.o(i.abs_limit)
-    constrain_float                          0x080071e5   Thumb Code    42  calculate.o(i.constrain_float)
-    dbus_uart_init                           0x08007211   Thumb Code    56  bsp_uart.o(i.dbus_uart_init)
-    dma_current_data_counter                 0x08007251   Thumb Code     8  bsp_uart.o(i.dma_current_data_counter)
-    drv_can_init                             0x08007259   Thumb Code   100  bsp_can.o(i.drv_can_init)
-    fric_set_output                          0x080072c5   Thumb Code   122  shoot.o(i.fric_set_output)
-    init_system                              0x08007355   Thumb Code   134  system.o(i.init_system)
-    kalman_filter_calc                       0x080073f1   Thumb Code   366  calculate.o(i.kalman_filter_calc)
-    main                                     0x08007569   Thumb Code    16  main.o(i.main)
-    pid_calc                                 0x08007579   Thumb Code   158  shoot.o(i.pid_calc)
-    rc_callback_handler                      0x08007617   Thumb Code   290  bsp_uart.o(i.rc_callback_handler)
-    sent_gimbal_to_down                      0x08007739   Thumb Code    48  task_gimbal.o(i.sent_gimbal_to_down)
-    shoot_fric_ctrl                          0x0800776d   Thumb Code   182  shoot.o(i.shoot_fric_ctrl)
-    shoot_init                               0x0800782d   Thumb Code    88  shoot.o(i.shoot_init)
-    task_PID_out                             0x080078a1   Thumb Code    68  task_gimbal.o(i.task_PID_out)
-    uart_receive_handler                     0x08007939   Thumb Code    34  bsp_uart.o(i.uart_receive_handler)
-    AHBPrescTable                            0x080079d4   Data          16  system_stm32f4xx.o(.constdata)
-    APBPrescTable                            0x080079e4   Data           8  system_stm32f4xx.o(.constdata)
-    Region$$Table$$Base                      0x080079ec   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08007a0c   Number         0  anon$$obj.o(Region$$Table)
+    REVOLVER_Rc_Ctrl                         0x08005c1d   Thumb Code   238  revolver.o(i.REVOLVER_Rc_Ctrl)
+    REVOLVER_Rc_Switch                       0x08005d41   Thumb Code    78  revolver.o(i.REVOLVER_Rc_Switch)
+    REVOLVER_Rest                            0x08005d99   Thumb Code   108  revolver.o(i.REVOLVER_Rest)
+    REVOL_PositStuck                         0x08005e2d   Thumb Code   174  revolver.o(i.REVOL_PositStuck)
+    REVOL_PositionLoop                       0x08005f01   Thumb Code   208  revolver.o(i.REVOL_PositionLoop)
+    REVOL_SpeedLoop                          0x08005ffd   Thumb Code   158  revolver.o(i.REVOL_SpeedLoop)
+    REVOL_UpdateMotorAngleSum                0x080060c1   Thumb Code   208  revolver.o(i.REVOL_UpdateMotorAngleSum)
+    RampInc_float                            0x0800619d   Thumb Code   142  calculate.o(i.RampInc_float)
+    Revolver_Angle_Rest                      0x08006231   Thumb Code    70  revolver.o(i.Revolver_Angle_Rest)
+    Revolver_Heat_Limit                      0x08006291   Thumb Code     4  revolver.o(i.Revolver_Heat_Limit)
+    SHOOT_HIGHTF_LOWS_Ctrl                   0x08006295   Thumb Code    48  revolver.o(i.SHOOT_HIGHTF_LOWS_Ctrl)
+    SHOOT_MIDF_HIGHTS_Ctrl                   0x080062d5   Thumb Code    50  revolver.o(i.SHOOT_MIDF_HIGHTS_Ctrl)
+    SHOOT_NORMAL_Ctrl                        0x08006319   Thumb Code   298  revolver.o(i.SHOOT_NORMAL_Ctrl)
+    SHOOT_SINGLE_Ctrl                        0x0800646d   Thumb Code    58  revolver.o(i.SHOOT_SINGLE_Ctrl)
+    SHOOT_TRIPLE_Ctrl                        0x080064bd   Thumb Code   142  revolver.o(i.SHOOT_TRIPLE_Ctrl)
+    SVC_Handler                              0x08006561   Thumb Code     2  stm32f4xx_it.o(i.SVC_Handler)
+    SYSTEM_GetRemoteMode                     0x08006565   Thumb Code     6  system.o(i.SYSTEM_GetRemoteMode)
+    SYSTEM_Reset                             0x08006571   Thumb Code     8  system.o(i.SYSTEM_Reset)
+    Shoot_Ctrl                               0x0800657d   Thumb Code    78  shoot.o(i.Shoot_Ctrl)
+    SysTick_Handler                          0x080065d9   Thumb Code     8  stm32f4xx_it.o(i.SysTick_Handler)
+    SystemClock_Config                       0x080065e1   Thumb Code   172  system.o(i.SystemClock_Config)
+    SystemInit                               0x08006695   Thumb Code    82  system_stm32f4xx.o(i.SystemInit)
+    System_Run                               0x080066f9   Thumb Code    34  system.o(i.System_Run)
+    System_Stop                              0x08006721   Thumb Code    64  system.o(i.System_Stop)
+    TIM3_IRQHandler                          0x08006765   Thumb Code     8  user_tim.o(i.TIM3_IRQHandler)
+    TIM4_IRQHandler                          0x0800676d   Thumb Code    12  user_tim.o(i.TIM4_IRQHandler)
+    TIM_Base_SetConfig                       0x0800677d   Thumb Code   170  stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig)
+    TIM_CCxChannelCmd                        0x08006855   Thumb Code    34  stm32f4xx_hal_tim.o(i.TIM_CCxChannelCmd)
+    TIM_ETR_SetConfig                        0x08006877   Thumb Code    22  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
+    TIM_OC2_SetConfig                        0x08006911   Thumb Code   114  stm32f4xx_hal_tim.o(i.TIM_OC2_SetConfig)
+    Target_Speed_Calc                        0x08006aa9   Thumb Code    92  task_gimbal.o(i.Target_Speed_Calc)
+    Task_Dispatch_tim                        0x08006b09   Thumb Code   162  system.o(i.Task_Dispatch_tim)
+    Task_Revolver                            0x08006bc1   Thumb Code   126  revolver.o(i.Task_Revolver)
+    Task_error                               0x08006c55   Thumb Code    14  system.o(i.Task_error)
+    USART1_IRQHandler                        0x080071ed   Thumb Code    16  stm32f4xx_it.o(i.USART1_IRQHandler)
+    USART2_IRQHandler                        0x08007201   Thumb Code    10  stm32f4xx_it.o(i.USART2_IRQHandler)
+    USART6_IRQHandler                        0x08007211   Thumb Code    10  stm32f4xx_it.o(i.USART6_IRQHandler)
+    UsageFault_Handler                       0x08007221   Thumb Code     4  stm32f4xx_it.o(i.UsageFault_Handler)
+    __hardfp_fabs                            0x0800725d   Thumb Code    20  fabs.o(i.__hardfp_fabs)
+    __scatterload_copy                       0x08007271   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0800727f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08007281   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    abs_limit                                0x0800728f   Thumb Code    46  shoot.o(i.abs_limit)
+    constrain_float                          0x080072bd   Thumb Code    42  calculate.o(i.constrain_float)
+    dbus_uart_init                           0x080072e9   Thumb Code    56  bsp_uart.o(i.dbus_uart_init)
+    dma_current_data_counter                 0x08007329   Thumb Code     8  bsp_uart.o(i.dma_current_data_counter)
+    drv_can_init                             0x08007331   Thumb Code   100  bsp_can.o(i.drv_can_init)
+    fric_set_output                          0x0800739d   Thumb Code   122  shoot.o(i.fric_set_output)
+    init_system                              0x0800742d   Thumb Code   134  system.o(i.init_system)
+    kalman_filter_calc                       0x080074c9   Thumb Code   366  calculate.o(i.kalman_filter_calc)
+    main                                     0x08007641   Thumb Code    16  main.o(i.main)
+    pid_calc                                 0x08007651   Thumb Code   158  shoot.o(i.pid_calc)
+    rc_callback_handler                      0x080076ef   Thumb Code   290  bsp_uart.o(i.rc_callback_handler)
+    sent_gimbal_to_down                      0x08007811   Thumb Code    48  task_gimbal.o(i.sent_gimbal_to_down)
+    shoot_fric_ctrl                          0x08007845   Thumb Code   182  shoot.o(i.shoot_fric_ctrl)
+    shoot_init                               0x08007905   Thumb Code    88  shoot.o(i.shoot_init)
+    task_PID_out                             0x08007979   Thumb Code    68  task_gimbal.o(i.task_PID_out)
+    uart_receive_handler                     0x08007a11   Thumb Code    34  bsp_uart.o(i.uart_receive_handler)
+    AHBPrescTable                            0x08007aac   Data          16  system_stm32f4xx.o(.constdata)
+    APBPrescTable                            0x08007abc   Data           8  system_stm32f4xx.o(.constdata)
+    Region$$Table$$Base                      0x08007ac4   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08007ae4   Number         0  anon$$obj.o(Region$$Table)
     uwTick                                   0x20000004   Data           4  stm32f4xx_hal.o(.data)
     uwTickPrio                               0x20000008   Data           4  stm32f4xx_hal.o(.data)
     uwTickFreq                               0x2000000c   Data           1  stm32f4xx_hal.o(.data)
@@ -2283,50 +2296,50 @@ Image Symbol Table
     Shoot_HeatIncSpeed                       0x20000450   Data           2  revolver.o(.data)
     revol_remot_change                       0x20000452   Data           1  revolver.o(.data)
     Revolver_Switch                          0x20000453   Data           1  revolver.o(.data)
-    hcan1                                    0x2000046c   Data          40  can.o(.bss)
-    hcan2                                    0x20000494   Data          40  can.o(.bss)
-    htim1                                    0x200004bc   Data          64  tim.o(.bss)
-    TIM8_PWM_Handler                         0x200004fc   Data          64  tim.o(.bss)
-    TIM8_PWM_OC                              0x2000053c   Data          28  tim.o(.bss)
-    huart6                                   0x20000558   Data          64  usart.o(.bss)
-    hdma_usart6_rx                           0x20000598   Data          96  usart.o(.bss)
-    huart1                                   0x200005f8   Data          64  usart.o(.bss)
-    huart2                                   0x20000638   Data          64  usart.o(.bss)
-    hdma_usart1_rx                           0x20000678   Data          96  usart.o(.bss)
-    hdma_usart2_rx                           0x200006d8   Data          96  usart.o(.bss)
-    hdma_usart2_tx                           0x20000738   Data          96  usart.o(.bss)
-    M3508                                    0x20000798   Data          48  bsp_can.o(.bss)
-    GM6020                                   0x200007c8   Data          24  bsp_can.o(.bss)
-    GM_TEST                                  0x200007e0   Data          24  bsp_can.o(.bss)
-    M2006                                    0x200007f8   Data          12  bsp_can.o(.bss)
-    dbus_buf                                 0x20000804   Data          18  bsp_uart.o(.bss)
-    rc_t                                     0x20000816   Data          22  bsp_uart.o(.bss)
-    htim3                                    0x2000082c   Data          64  user_tim.o(.bss)
-    htim4                                    0x2000086c   Data          64  user_tim.o(.bss)
-    Cloud_Angle_Target                       0x200008ac   Data          16  task_gimbal.o(.bss)
-    Cloud_Angle_Measure                      0x200008bc   Data          16  task_gimbal.o(.bss)
-    Cloud_Palstance_Measure                  0x200008cc   Data          16  task_gimbal.o(.bss)
-    Pitch_mech_pid                           0x200008dc   Data         132  task_gimbal.o(.bss)
-    Yaw_mech_pid                             0x20000960   Data         132  task_gimbal.o(.bss)
-    Yaw_gyro_pid                             0x200009e4   Data         132  task_gimbal.o(.bss)
-    Gimbal_PID_list                          0x20000a68   Data         288  task_gimbal.o(.bss)
-    Gimbal_Pitch_Mech_Error_Kalman           0x20000b88   Data          36  task_gimbal.o(.bss)
-    Gimbal_Yaw_Mech_Error_Kalman             0x20000bac   Data          36  task_gimbal.o(.bss)
-    Gimbal_Yaw_Gyro_Error_Kalman             0x20000bd0   Data          36  task_gimbal.o(.bss)
-    Vision_Distance_Kalman                   0x20000bf4   Data          36  task_gimbal.o(.bss)
-    Vision_Yaw_speed_Struct                  0x20000c18   Data          28  task_gimbal.o(.bss)
-    Vision_Pitch_speed_Struct                0x20000c34   Data          28  task_gimbal.o(.bss)
-    yaw_kalman_filter                        0x20000c50   Data         108  task_gimbal.o(.bss)
-    pitch_kalman_filter                      0x20000cbc   Data         108  task_gimbal.o(.bss)
-    M3508E_PID                               0x20000d38   Data          64  shoot.o(.bss)
-    M3508F_PID                               0x20000d78   Data          64  shoot.o(.bss)
-    fric_speed                               0x20000db8   Data          16  shoot.o(.bss)
-    Rx                                       0x20000dc8   Data          22  system.o(.bss)
-    VisionRecvData                           0x20000de0   Data          16  vision.o(.bss)
-    VisionSendData                           0x20000df0   Data          16  vision.o(.bss)
-    Revolver_Speed_kpid                      0x20000e00   Data          12  revolver.o(.bss)
-    Revolver_Angle_kpid                      0x20000e0c   Data          24  revolver.o(.bss)
-    __initial_sp                             0x20001228   Data           0  startup_stm32f427xx.o(STACK)
+    hcan1                                    0x20000474   Data          40  can.o(.bss)
+    hcan2                                    0x2000049c   Data          40  can.o(.bss)
+    htim1                                    0x200004c4   Data          64  tim.o(.bss)
+    TIM8_PWM_Handler                         0x20000504   Data          64  tim.o(.bss)
+    TIM8_PWM_OC                              0x20000544   Data          28  tim.o(.bss)
+    huart6                                   0x20000560   Data          64  usart.o(.bss)
+    hdma_usart6_rx                           0x200005a0   Data          96  usart.o(.bss)
+    huart1                                   0x20000600   Data          64  usart.o(.bss)
+    huart2                                   0x20000640   Data          64  usart.o(.bss)
+    hdma_usart1_rx                           0x20000680   Data          96  usart.o(.bss)
+    hdma_usart2_rx                           0x200006e0   Data          96  usart.o(.bss)
+    hdma_usart2_tx                           0x20000740   Data          96  usart.o(.bss)
+    M3508                                    0x200007a0   Data          48  bsp_can.o(.bss)
+    GM6020                                   0x200007d0   Data          24  bsp_can.o(.bss)
+    GM_TEST                                  0x200007e8   Data          24  bsp_can.o(.bss)
+    M2006                                    0x20000800   Data          12  bsp_can.o(.bss)
+    dbus_buf                                 0x2000080c   Data          18  bsp_uart.o(.bss)
+    rc_t                                     0x2000081e   Data          22  bsp_uart.o(.bss)
+    htim3                                    0x20000834   Data          64  user_tim.o(.bss)
+    htim4                                    0x20000874   Data          64  user_tim.o(.bss)
+    Cloud_Angle_Target                       0x200008b4   Data          16  task_gimbal.o(.bss)
+    Cloud_Angle_Measure                      0x200008c4   Data          16  task_gimbal.o(.bss)
+    Cloud_Palstance_Measure                  0x200008d4   Data          16  task_gimbal.o(.bss)
+    Pitch_mech_pid                           0x200008e4   Data         132  task_gimbal.o(.bss)
+    Yaw_mech_pid                             0x20000968   Data         132  task_gimbal.o(.bss)
+    Yaw_gyro_pid                             0x200009ec   Data         132  task_gimbal.o(.bss)
+    Gimbal_PID_list                          0x20000a70   Data         288  task_gimbal.o(.bss)
+    Gimbal_Pitch_Mech_Error_Kalman           0x20000b90   Data          36  task_gimbal.o(.bss)
+    Gimbal_Yaw_Mech_Error_Kalman             0x20000bb4   Data          36  task_gimbal.o(.bss)
+    Gimbal_Yaw_Gyro_Error_Kalman             0x20000bd8   Data          36  task_gimbal.o(.bss)
+    Vision_Distance_Kalman                   0x20000bfc   Data          36  task_gimbal.o(.bss)
+    Vision_Yaw_speed_Struct                  0x20000c20   Data          28  task_gimbal.o(.bss)
+    Vision_Pitch_speed_Struct                0x20000c3c   Data          28  task_gimbal.o(.bss)
+    yaw_kalman_filter                        0x20000c58   Data         108  task_gimbal.o(.bss)
+    pitch_kalman_filter                      0x20000cc4   Data         108  task_gimbal.o(.bss)
+    M3508E_PID                               0x20000d40   Data          64  shoot.o(.bss)
+    M3508F_PID                               0x20000d80   Data          64  shoot.o(.bss)
+    fric_speed                               0x20000dc0   Data          16  shoot.o(.bss)
+    Rx                                       0x20000dd0   Data          22  system.o(.bss)
+    VisionRecvData                           0x20000de8   Data          16  vision.o(.bss)
+    VisionSendData                           0x20000df8   Data          16  vision.o(.bss)
+    Revolver_Speed_kpid                      0x20000e08   Data          12  revolver.o(.bss)
+    Revolver_Angle_kpid                      0x20000e14   Data          24  revolver.o(.bss)
+    __initial_sp                             0x20001230   Data           0  startup_stm32f427xx.o(STACK)
 
 
 
@@ -2336,45 +2349,45 @@ Memory Map of the image
 
   Image Entry point : 0x080001ad
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00007e78, Max: 0x00200000, ABSOLUTE, COMPRESSED[0x00007a68])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00007f58, Max: 0x00200000, ABSOLUTE, COMPRESSED[0x00007b40])
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00007a0c, Max: 0x00200000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00007ae4, Max: 0x00200000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x000001ac   Data   RO            3    RESET               startup_stm32f427xx.o
-    0x080001ac   0x00000000   Code   RO         4626  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080001ac   0x00000004   Code   RO         4649    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080001b0   0x00000004   Code   RO         4652    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080001b4   0x00000000   Code   RO         4654    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080001b4   0x00000000   Code   RO         4656    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080001b4   0x00000008   Code   RO         4657    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080001bc   0x00000000   Code   RO         4659    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x080001bc   0x00000000   Code   RO         4661    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x080001bc   0x00000004   Code   RO         4650    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x080001ac   0x00000000   Code   RO         4644  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080001ac   0x00000004   Code   RO         4667    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080001b0   0x00000004   Code   RO         4670    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080001b4   0x00000000   Code   RO         4672    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080001b4   0x00000000   Code   RO         4674    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080001b4   0x00000008   Code   RO         4675    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080001bc   0x00000000   Code   RO         4677    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080001bc   0x00000000   Code   RO         4679    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080001bc   0x00000004   Code   RO         4668    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x080001c0   0x00000024   Code   RO            4    .text               startup_stm32f427xx.o
-    0x080001e4   0x00000108   Code   RO         4451    .text               arm_cortexM4lf_math.lib(arm_mat_add_f32.o)
-    0x080002ec   0x00000008   Code   RO         4503    .text               arm_cortexM4lf_math.lib(arm_mat_init_f32.o)
-    0x080002f4   0x00000530   Code   RO         4527    .text               arm_cortexM4lf_math.lib(arm_mat_inverse_f32.o)
-    0x08000824   0x0000013c   Code   RO         4551    .text               arm_cortexM4lf_math.lib(arm_mat_mult_f32.o)
-    0x08000960   0x00000108   Code   RO         4575    .text               arm_cortexM4lf_math.lib(arm_mat_sub_f32.o)
-    0x08000a68   0x00000062   Code   RO         4629    .text               mc_w.l(uldiv.o)
-    0x08000aca   0x00000024   Code   RO         4631    .text               mc_w.l(memseta.o)
-    0x08000aee   0x000000e4   Code   RO         4635    .text               mf_w.l(dmul.o)
-    0x08000bd2   0x00000022   Code   RO         4639    .text               mf_w.l(dflti.o)
-    0x08000bf4   0x00000026   Code   RO         4641    .text               mf_w.l(f2d.o)
+    0x080001e4   0x00000108   Code   RO         4469    .text               arm_cortexM4lf_math.lib(arm_mat_add_f32.o)
+    0x080002ec   0x00000008   Code   RO         4521    .text               arm_cortexM4lf_math.lib(arm_mat_init_f32.o)
+    0x080002f4   0x00000530   Code   RO         4545    .text               arm_cortexM4lf_math.lib(arm_mat_inverse_f32.o)
+    0x08000824   0x0000013c   Code   RO         4569    .text               arm_cortexM4lf_math.lib(arm_mat_mult_f32.o)
+    0x08000960   0x00000108   Code   RO         4593    .text               arm_cortexM4lf_math.lib(arm_mat_sub_f32.o)
+    0x08000a68   0x00000062   Code   RO         4647    .text               mc_w.l(uldiv.o)
+    0x08000aca   0x00000024   Code   RO         4649    .text               mc_w.l(memseta.o)
+    0x08000aee   0x000000e4   Code   RO         4653    .text               mf_w.l(dmul.o)
+    0x08000bd2   0x00000022   Code   RO         4657    .text               mf_w.l(dflti.o)
+    0x08000bf4   0x00000026   Code   RO         4659    .text               mf_w.l(f2d.o)
     0x08000c1a   0x00000002   PAD
-    0x08000c1c   0x00000030   Code   RO         4643    .text               mf_w.l(cdcmple.o)
-    0x08000c4c   0x00000030   Code   RO         4645    .text               mf_w.l(cdrcmple.o)
-    0x08000c7c   0x00000038   Code   RO         4647    .text               mf_w.l(d2f.o)
-    0x08000cb4   0x0000001e   Code   RO         4663    .text               mc_w.l(llshl.o)
-    0x08000cd2   0x00000020   Code   RO         4665    .text               mc_w.l(llushr.o)
-    0x08000cf2   0x00000000   Code   RO         4669    .text               mc_w.l(iusefp.o)
-    0x08000cf2   0x0000006e   Code   RO         4670    .text               mf_w.l(fepilogue.o)
-    0x08000d60   0x000000ba   Code   RO         4672    .text               mf_w.l(depilogue.o)
+    0x08000c1c   0x00000030   Code   RO         4661    .text               mf_w.l(cdcmple.o)
+    0x08000c4c   0x00000030   Code   RO         4663    .text               mf_w.l(cdrcmple.o)
+    0x08000c7c   0x00000038   Code   RO         4665    .text               mf_w.l(d2f.o)
+    0x08000cb4   0x0000001e   Code   RO         4681    .text               mc_w.l(llshl.o)
+    0x08000cd2   0x00000020   Code   RO         4683    .text               mc_w.l(llushr.o)
+    0x08000cf2   0x00000000   Code   RO         4687    .text               mc_w.l(iusefp.o)
+    0x08000cf2   0x0000006e   Code   RO         4688    .text               mf_w.l(fepilogue.o)
+    0x08000d60   0x000000ba   Code   RO         4690    .text               mf_w.l(depilogue.o)
     0x08000e1a   0x00000002   PAD
-    0x08000e1c   0x00000024   Code   RO         4674    .text               mc_w.l(init.o)
-    0x08000e40   0x00000056   Code   RO         4684    .text               mc_w.l(__dczerorl2.o)
+    0x08000e1c   0x00000024   Code   RO         4692    .text               mc_w.l(init.o)
+    0x08000e40   0x00000056   Code   RO         4702    .text               mc_w.l(__dczerorl2.o)
     0x08000e96   0x00000004   Code   RO          443    i.BusFault_Handler  stm32f4xx_it.o
     0x08000e9a   0x00000002   PAD
     0x08000e9c   0x00000010   Code   RO          444    i.CAN1_RX0_IRQHandler  stm32f4xx_it.o
@@ -2479,9 +2492,9 @@ Memory Map of the image
     0x08005292   0x00000004   Code   RO          452    i.HardFault_Handler  stm32f4xx_it.o
     0x08005296   0x00000002   PAD
     0x08005298   0x0000002c   Code   RO         3851    i.IF_FRIC_READY     shoot.o
-    0x080052c4   0x00000004   Code   RO         4303    i.JUDGE_usGetShootCold  revolver.o
-    0x080052c8   0x00000020   Code   RO         4165    i.KalmanCreate      calculate.o
-    0x080052e8   0x0000007a   Code   RO         4166    i.KalmanFilter      calculate.o
+    0x080052c4   0x00000004   Code   RO         4315    i.JUDGE_usGetShootCold  revolver.o
+    0x080052c8   0x00000020   Code   RO         4177    i.KalmanCreate      calculate.o
+    0x080052e8   0x0000007a   Code   RO         4178    i.KalmanFilter      calculate.o
     0x08005362   0x00000002   PAD
     0x08005364   0x00000048   Code   RO          258    i.MX_CAN1_Init      can.o
     0x080053ac   0x00000048   Code   RO          259    i.MX_CAN2_Init      can.o
@@ -2492,111 +2505,112 @@ Memory Map of the image
     0x0800573c   0x0000003c   Code   RO          391    i.MX_USART1_UART_Init  usart.o
     0x08005778   0x00000038   Code   RO          392    i.MX_USART2_UART_Init  usart.o
     0x080057b0   0x00000038   Code   RO          393    i.MX_USART6_UART_Init  usart.o
-    0x080057e8   0x0000006c   Code   RO         4243    i.Magazine_Ctrl     magazine.o
-    0x08005854   0x00000090   Code   RO         4244    i.Magazine_Key_Ctrl  magazine.o
-    0x080058e4   0x00000014   Code   RO         4247    i.Magazine_init     magazine.o
-    0x080058f8   0x00000058   Code   RO         4248    i.Magezine_Rc_Switch  magazine.o
+    0x080057e8   0x0000006c   Code   RO         4255    i.Magazine_Ctrl     magazine.o
+    0x08005854   0x00000090   Code   RO         4256    i.Magazine_Key_Ctrl  magazine.o
+    0x080058e4   0x00000014   Code   RO         4259    i.Magazine_init     magazine.o
+    0x080058f8   0x00000058   Code   RO         4260    i.Magezine_Rc_Switch  magazine.o
     0x08005950   0x00000004   Code   RO          453    i.MemManage_Handler  stm32f4xx_it.o
     0x08005954   0x00000002   Code   RO          454    i.NMI_Handler       stm32f4xx_it.o
     0x08005956   0x00000012   Code   RO         3852    i.PID_struct_init   shoot.o
     0x08005968   0x00000002   Code   RO          455    i.PendSV_Handler    stm32f4xx_it.o
     0x0800596a   0x00000002   PAD
-    0x0800596c   0x0000006c   Code   RO         4167    i.RAMP_float        calculate.o
-    0x080059d8   0x00000038   Code   RO         4304    i.REVOLVER_CANbusCtrlMotor  revolver.o
-    0x08005a10   0x00000104   Code   RO         4305    i.REVOLVER_InitArgument  revolver.o
-    0x08005b14   0x00000090   Code   RO         4306    i.REVOLVER_KeyPosiCtrl  revolver.o
-    0x08005ba4   0x00000002   Code   RO         4307    i.REVOLVER_KeySpeedCtrl  revolver.o
+    0x0800596c   0x0000006c   Code   RO         4179    i.RAMP_float        calculate.o
+    0x080059d8   0x00000038   Code   RO         4316    i.REVOLVER_CANbusCtrlMotor  revolver.o
+    0x08005a10   0x00000104   Code   RO         4317    i.REVOLVER_InitArgument  revolver.o
+    0x08005b14   0x00000090   Code   RO         4318    i.REVOLVER_KeyPosiCtrl  revolver.o
+    0x08005ba4   0x00000002   Code   RO         4319    i.REVOLVER_KeySpeedCtrl  revolver.o
     0x08005ba6   0x00000002   PAD
-    0x08005ba8   0x00000074   Code   RO         4308    i.REVOLVER_Key_Ctrl  revolver.o
-    0x08005c1c   0x00000120   Code   RO         4309    i.REVOLVER_Rc_Ctrl  revolver.o
-    0x08005d3c   0x00000058   Code   RO         4310    i.REVOLVER_Rc_Switch  revolver.o
-    0x08005d94   0x00000094   Code   RO         4311    i.REVOLVER_Rest     revolver.o
-    0x08005e28   0x000000fc   Code   RO         4312    i.REVOL_PositionLoop  revolver.o
-    0x08005f24   0x000000c4   Code   RO         4313    i.REVOL_SpeedLoop   revolver.o
-    0x08005fe8   0x000000dc   Code   RO         4314    i.REVOL_UpdateMotorAngleSum  revolver.o
-    0x080060c4   0x00000094   Code   RO         4168    i.RampInc_float     calculate.o
-    0x08006158   0x00000060   Code   RO         4315    i.Revolver_Angle_Rest  revolver.o
-    0x080061b8   0x00000004   Code   RO         4316    i.Revolver_Heat_Limit  revolver.o
-    0x080061bc   0x00000040   Code   RO         4318    i.SHOOT_HIGHTF_LOWS_Ctrl  revolver.o
-    0x080061fc   0x00000044   Code   RO         4319    i.SHOOT_MIDF_HIGHTS_Ctrl  revolver.o
-    0x08006240   0x00000154   Code   RO         4320    i.SHOOT_NORMAL_Ctrl  revolver.o
-    0x08006394   0x00000050   Code   RO         4321    i.SHOOT_SINGLE_Ctrl  revolver.o
-    0x080063e4   0x000000a4   Code   RO         4322    i.SHOOT_TRIPLE_Ctrl  revolver.o
-    0x08006488   0x00000002   Code   RO          456    i.SVC_Handler       stm32f4xx_it.o
-    0x0800648a   0x00000002   PAD
-    0x0800648c   0x0000000c   Code   RO         4037    i.SYSTEM_GetRemoteMode  system.o
-    0x08006498   0x0000000c   Code   RO         4039    i.SYSTEM_Reset      system.o
-    0x080064a4   0x0000005c   Code   RO         3853    i.Shoot_Ctrl        shoot.o
-    0x08006500   0x00000008   Code   RO          457    i.SysTick_Handler   stm32f4xx_it.o
-    0x08006508   0x000000b4   Code   RO         4041    i.SystemClock_Config  system.o
-    0x080065bc   0x00000064   Code   RO         3374    i.SystemInit        system_stm32f4xx.o
-    0x08006620   0x00000028   Code   RO         4042    i.System_Run        system.o
-    0x08006648   0x00000044   Code   RO         4043    i.System_Stop       system.o
-    0x0800668c   0x00000008   Code   RO         3648    i.TIM3_IRQHandler   user_tim.o
-    0x08006694   0x00000010   Code   RO         3649    i.TIM4_IRQHandler   user_tim.o
-    0x080066a4   0x000000d8   Code   RO          927    i.TIM_Base_SetConfig  stm32f4xx_hal_tim.o
-    0x0800677c   0x00000022   Code   RO          928    i.TIM_CCxChannelCmd  stm32f4xx_hal_tim.o
-    0x0800679e   0x00000016   Code   RO          938    i.TIM_ETR_SetConfig  stm32f4xx_hal_tim.o
-    0x080067b4   0x00000012   Code   RO          939    i.TIM_ITRx_SetConfig  stm32f4xx_hal_tim.o
-    0x080067c6   0x00000002   PAD
-    0x080067c8   0x00000070   Code   RO          940    i.TIM_OC1_SetConfig  stm32f4xx_hal_tim.o
-    0x08006838   0x0000007c   Code   RO          941    i.TIM_OC2_SetConfig  stm32f4xx_hal_tim.o
-    0x080068b4   0x00000078   Code   RO          942    i.TIM_OC3_SetConfig  stm32f4xx_hal_tim.o
-    0x0800692c   0x00000054   Code   RO          943    i.TIM_OC4_SetConfig  stm32f4xx_hal_tim.o
-    0x08006980   0x00000026   Code   RO          945    i.TIM_TI1_ConfigInputStage  stm32f4xx_hal_tim.o
-    0x080069a6   0x00000028   Code   RO          947    i.TIM_TI2_ConfigInputStage  stm32f4xx_hal_tim.o
-    0x080069ce   0x00000002   PAD
-    0x080069d0   0x00000060   Code   RO         3715    i.Target_Speed_Calc  task_gimbal.o
-    0x08006a30   0x000000b8   Code   RO         4044    i.Task_Dispatch_tim  system.o
-    0x08006ae8   0x00000094   Code   RO         4323    i.Task_Revolver     revolver.o
-    0x08006b7c   0x00000014   Code   RO         4045    i.Task_error        system.o
-    0x08006b90   0x00000014   Code   RO         1814    i.UART_DMAAbortOnError  stm32f4xx_hal_uart.o
-    0x08006ba4   0x00000050   Code   RO         1815    i.UART_DMAError     stm32f4xx_hal_uart.o
-    0x08006bf4   0x00000046   Code   RO         1816    i.UART_DMAReceiveCplt  stm32f4xx_hal_uart.o
-    0x08006c3a   0x0000000e   Code   RO         1818    i.UART_DMARxHalfCplt  stm32f4xx_hal_uart.o
-    0x08006c48   0x00000020   Code   RO         1824    i.UART_EndRxTransfer  stm32f4xx_hal_uart.o
-    0x08006c68   0x00000020   Code   RO         1825    i.UART_EndTransmit_IT  stm32f4xx_hal_uart.o
-    0x08006c88   0x00000014   Code   RO         1826    i.UART_EndTxTransfer  stm32f4xx_hal_uart.o
-    0x08006c9c   0x000000a6   Code   RO         1827    i.UART_Receive_IT   stm32f4xx_hal_uart.o
-    0x08006d42   0x00000002   PAD
-    0x08006d44   0x00000368   Code   RO         1828    i.UART_SetConfig    stm32f4xx_hal_uart.o
-    0x080070ac   0x00000068   Code   RO         1829    i.UART_Transmit_IT  stm32f4xx_hal_uart.o
-    0x08007114   0x00000014   Code   RO          458    i.USART1_IRQHandler  stm32f4xx_it.o
-    0x08007128   0x00000010   Code   RO          459    i.USART2_IRQHandler  stm32f4xx_it.o
-    0x08007138   0x00000010   Code   RO          460    i.USART6_IRQHandler  stm32f4xx_it.o
-    0x08007148   0x00000004   Code   RO          461    i.UsageFault_Handler  stm32f4xx_it.o
-    0x0800714c   0x00000010   Code   RO         2984    i.__NVIC_GetPriorityGrouping  stm32f4xx_hal_cortex.o
-    0x0800715c   0x00000028   Code   RO         2985    i.__NVIC_SetPriority  stm32f4xx_hal_cortex.o
-    0x08007184   0x00000014   Code   RO         4620    i.__hardfp_fabs     m_wm.l(fabs.o)
-    0x08007198   0x0000000e   Code   RO         4678    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x080071a6   0x00000002   Code   RO         4679    i.__scatterload_null  mc_w.l(handlers.o)
-    0x080071a8   0x0000000e   Code   RO         4680    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x080071b6   0x0000002e   Code   RO         3854    i.abs_limit         shoot.o
-    0x080071e4   0x0000002a   Code   RO         4169    i.constrain_float   calculate.o
-    0x0800720e   0x00000002   PAD
-    0x08007210   0x00000040   Code   RO         3533    i.dbus_uart_init    bsp_uart.o
-    0x08007250   0x00000008   Code   RO         3534    i.dma_current_data_counter  bsp_uart.o
-    0x08007258   0x0000006c   Code   RO         3417    i.drv_can_init      bsp_can.o
-    0x080072c4   0x00000090   Code   RO         3855    i.fric_set_output   shoot.o
-    0x08007354   0x0000009c   Code   RO         4046    i.init_system       system.o
-    0x080073f0   0x00000178   Code   RO         4170    i.kalman_filter_calc  calculate.o
-    0x08007568   0x00000010   Code   RO           14    i.main              main.o
-    0x08007578   0x0000009e   Code   RO         3856    i.pid_calc          shoot.o
-    0x08007616   0x00000122   Code   RO         3535    i.rc_callback_handler  bsp_uart.o
-    0x08007738   0x00000034   Code   RO         3717    i.sent_gimbal_to_down  task_gimbal.o
-    0x0800776c   0x000000c0   Code   RO         3858    i.shoot_fric_ctrl   shoot.o
-    0x0800782c   0x00000074   Code   RO         3859    i.shoot_init        shoot.o
-    0x080078a0   0x00000050   Code   RO         3718    i.task_PID_out      task_gimbal.o
-    0x080078f0   0x00000048   Code   RO         3536    i.uart_receive_dma_no_it  bsp_uart.o
-    0x08007938   0x00000022   Code   RO         3537    i.uart_receive_handler  bsp_uart.o
-    0x0800795a   0x00000002   PAD
-    0x0800795c   0x00000070   Code   RO         3538    i.uart_rx_idle_callback  bsp_uart.o
-    0x080079cc   0x00000008   Data   RO         2683    .constdata          stm32f4xx_hal_dma.o
-    0x080079d4   0x00000018   Data   RO         3375    .constdata          system_stm32f4xx.o
-    0x080079ec   0x00000020   Data   RO         4676    Region$$Table       anon$$obj.o
+    0x08005ba8   0x00000074   Code   RO         4320    i.REVOLVER_Key_Ctrl  revolver.o
+    0x08005c1c   0x00000124   Code   RO         4321    i.REVOLVER_Rc_Ctrl  revolver.o
+    0x08005d40   0x00000058   Code   RO         4322    i.REVOLVER_Rc_Switch  revolver.o
+    0x08005d98   0x00000094   Code   RO         4323    i.REVOLVER_Rest     revolver.o
+    0x08005e2c   0x000000d4   Code   RO         4324    i.REVOL_PositStuck  revolver.o
+    0x08005f00   0x000000fc   Code   RO         4325    i.REVOL_PositionLoop  revolver.o
+    0x08005ffc   0x000000c4   Code   RO         4326    i.REVOL_SpeedLoop   revolver.o
+    0x080060c0   0x000000dc   Code   RO         4327    i.REVOL_UpdateMotorAngleSum  revolver.o
+    0x0800619c   0x00000094   Code   RO         4180    i.RampInc_float     calculate.o
+    0x08006230   0x00000060   Code   RO         4328    i.Revolver_Angle_Rest  revolver.o
+    0x08006290   0x00000004   Code   RO         4329    i.Revolver_Heat_Limit  revolver.o
+    0x08006294   0x00000040   Code   RO         4331    i.SHOOT_HIGHTF_LOWS_Ctrl  revolver.o
+    0x080062d4   0x00000044   Code   RO         4332    i.SHOOT_MIDF_HIGHTS_Ctrl  revolver.o
+    0x08006318   0x00000154   Code   RO         4333    i.SHOOT_NORMAL_Ctrl  revolver.o
+    0x0800646c   0x00000050   Code   RO         4334    i.SHOOT_SINGLE_Ctrl  revolver.o
+    0x080064bc   0x000000a4   Code   RO         4335    i.SHOOT_TRIPLE_Ctrl  revolver.o
+    0x08006560   0x00000002   Code   RO          456    i.SVC_Handler       stm32f4xx_it.o
+    0x08006562   0x00000002   PAD
+    0x08006564   0x0000000c   Code   RO         4049    i.SYSTEM_GetRemoteMode  system.o
+    0x08006570   0x0000000c   Code   RO         4051    i.SYSTEM_Reset      system.o
+    0x0800657c   0x0000005c   Code   RO         3855    i.Shoot_Ctrl        shoot.o
+    0x080065d8   0x00000008   Code   RO          457    i.SysTick_Handler   stm32f4xx_it.o
+    0x080065e0   0x000000b4   Code   RO         4053    i.SystemClock_Config  system.o
+    0x08006694   0x00000064   Code   RO         3374    i.SystemInit        system_stm32f4xx.o
+    0x080066f8   0x00000028   Code   RO         4054    i.System_Run        system.o
+    0x08006720   0x00000044   Code   RO         4055    i.System_Stop       system.o
+    0x08006764   0x00000008   Code   RO         3648    i.TIM3_IRQHandler   user_tim.o
+    0x0800676c   0x00000010   Code   RO         3649    i.TIM4_IRQHandler   user_tim.o
+    0x0800677c   0x000000d8   Code   RO          927    i.TIM_Base_SetConfig  stm32f4xx_hal_tim.o
+    0x08006854   0x00000022   Code   RO          928    i.TIM_CCxChannelCmd  stm32f4xx_hal_tim.o
+    0x08006876   0x00000016   Code   RO          938    i.TIM_ETR_SetConfig  stm32f4xx_hal_tim.o
+    0x0800688c   0x00000012   Code   RO          939    i.TIM_ITRx_SetConfig  stm32f4xx_hal_tim.o
+    0x0800689e   0x00000002   PAD
+    0x080068a0   0x00000070   Code   RO          940    i.TIM_OC1_SetConfig  stm32f4xx_hal_tim.o
+    0x08006910   0x0000007c   Code   RO          941    i.TIM_OC2_SetConfig  stm32f4xx_hal_tim.o
+    0x0800698c   0x00000078   Code   RO          942    i.TIM_OC3_SetConfig  stm32f4xx_hal_tim.o
+    0x08006a04   0x00000054   Code   RO          943    i.TIM_OC4_SetConfig  stm32f4xx_hal_tim.o
+    0x08006a58   0x00000026   Code   RO          945    i.TIM_TI1_ConfigInputStage  stm32f4xx_hal_tim.o
+    0x08006a7e   0x00000028   Code   RO          947    i.TIM_TI2_ConfigInputStage  stm32f4xx_hal_tim.o
+    0x08006aa6   0x00000002   PAD
+    0x08006aa8   0x00000060   Code   RO         3715    i.Target_Speed_Calc  task_gimbal.o
+    0x08006b08   0x000000b8   Code   RO         4056    i.Task_Dispatch_tim  system.o
+    0x08006bc0   0x00000094   Code   RO         4336    i.Task_Revolver     revolver.o
+    0x08006c54   0x00000014   Code   RO         4057    i.Task_error        system.o
+    0x08006c68   0x00000014   Code   RO         1814    i.UART_DMAAbortOnError  stm32f4xx_hal_uart.o
+    0x08006c7c   0x00000050   Code   RO         1815    i.UART_DMAError     stm32f4xx_hal_uart.o
+    0x08006ccc   0x00000046   Code   RO         1816    i.UART_DMAReceiveCplt  stm32f4xx_hal_uart.o
+    0x08006d12   0x0000000e   Code   RO         1818    i.UART_DMARxHalfCplt  stm32f4xx_hal_uart.o
+    0x08006d20   0x00000020   Code   RO         1824    i.UART_EndRxTransfer  stm32f4xx_hal_uart.o
+    0x08006d40   0x00000020   Code   RO         1825    i.UART_EndTransmit_IT  stm32f4xx_hal_uart.o
+    0x08006d60   0x00000014   Code   RO         1826    i.UART_EndTxTransfer  stm32f4xx_hal_uart.o
+    0x08006d74   0x000000a6   Code   RO         1827    i.UART_Receive_IT   stm32f4xx_hal_uart.o
+    0x08006e1a   0x00000002   PAD
+    0x08006e1c   0x00000368   Code   RO         1828    i.UART_SetConfig    stm32f4xx_hal_uart.o
+    0x08007184   0x00000068   Code   RO         1829    i.UART_Transmit_IT  stm32f4xx_hal_uart.o
+    0x080071ec   0x00000014   Code   RO          458    i.USART1_IRQHandler  stm32f4xx_it.o
+    0x08007200   0x00000010   Code   RO          459    i.USART2_IRQHandler  stm32f4xx_it.o
+    0x08007210   0x00000010   Code   RO          460    i.USART6_IRQHandler  stm32f4xx_it.o
+    0x08007220   0x00000004   Code   RO          461    i.UsageFault_Handler  stm32f4xx_it.o
+    0x08007224   0x00000010   Code   RO         2984    i.__NVIC_GetPriorityGrouping  stm32f4xx_hal_cortex.o
+    0x08007234   0x00000028   Code   RO         2985    i.__NVIC_SetPriority  stm32f4xx_hal_cortex.o
+    0x0800725c   0x00000014   Code   RO         4638    i.__hardfp_fabs     m_wm.l(fabs.o)
+    0x08007270   0x0000000e   Code   RO         4696    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800727e   0x00000002   Code   RO         4697    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08007280   0x0000000e   Code   RO         4698    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0800728e   0x0000002e   Code   RO         3856    i.abs_limit         shoot.o
+    0x080072bc   0x0000002a   Code   RO         4181    i.constrain_float   calculate.o
+    0x080072e6   0x00000002   PAD
+    0x080072e8   0x00000040   Code   RO         3533    i.dbus_uart_init    bsp_uart.o
+    0x08007328   0x00000008   Code   RO         3534    i.dma_current_data_counter  bsp_uart.o
+    0x08007330   0x0000006c   Code   RO         3417    i.drv_can_init      bsp_can.o
+    0x0800739c   0x00000090   Code   RO         3857    i.fric_set_output   shoot.o
+    0x0800742c   0x0000009c   Code   RO         4058    i.init_system       system.o
+    0x080074c8   0x00000178   Code   RO         4182    i.kalman_filter_calc  calculate.o
+    0x08007640   0x00000010   Code   RO           14    i.main              main.o
+    0x08007650   0x0000009e   Code   RO         3858    i.pid_calc          shoot.o
+    0x080076ee   0x00000122   Code   RO         3535    i.rc_callback_handler  bsp_uart.o
+    0x08007810   0x00000034   Code   RO         3717    i.sent_gimbal_to_down  task_gimbal.o
+    0x08007844   0x000000c0   Code   RO         3860    i.shoot_fric_ctrl   shoot.o
+    0x08007904   0x00000074   Code   RO         3861    i.shoot_init        shoot.o
+    0x08007978   0x00000050   Code   RO         3718    i.task_PID_out      task_gimbal.o
+    0x080079c8   0x00000048   Code   RO         3536    i.uart_receive_dma_no_it  bsp_uart.o
+    0x08007a10   0x00000022   Code   RO         3537    i.uart_receive_handler  bsp_uart.o
+    0x08007a32   0x00000002   PAD
+    0x08007a34   0x00000070   Code   RO         3538    i.uart_rx_idle_callback  bsp_uart.o
+    0x08007aa4   0x00000008   Data   RO         2683    .constdata          stm32f4xx_hal_dma.o
+    0x08007aac   0x00000018   Data   RO         3375    .constdata          system_stm32f4xx.o
+    0x08007ac4   0x00000020   Data   RO         4694    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00001228, Max: 0x00030000, ABSOLUTE, COMPRESSED[0x0000005c])
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00001230, Max: 0x00030000, ABSOLUTE, COMPRESSED[0x0000005c])
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2606,31 +2620,32 @@ Memory Map of the image
     0x20000010   0x00000004   Data   RW         3376    .data               system_stm32f4xx.o
     0x20000014   0x00000010   Data   RW         3419    .data               bsp_can.o
     0x20000024   0x000002e0   Data   RW         3720    .data               task_gimbal.o
-    0x20000304   0x0000003d   Data   RW         3862    .data               shoot.o
+    0x20000304   0x0000003d   Data   RW         3864    .data               shoot.o
     0x20000341   0x00000003   PAD
-    0x20000344   0x00000059   Data   RW         3997    .data               jy901.o
+    0x20000344   0x00000059   Data   RW         4009    .data               jy901.o
     0x2000039d   0x00000003   PAD
-    0x200003a0   0x0000001e   Data   RW         4048    .data               system.o
-    0x200003be   0x00000003   Data   RW         4126    .data               vision.o
+    0x200003a0   0x0000001e   Data   RW         4060    .data               system.o
+    0x200003be   0x00000003   Data   RW         4138    .data               vision.o
     0x200003c1   0x00000003   PAD
-    0x200003c4   0x00000008   Data   RW         4173    .data               calculate.o
-    0x200003cc   0x00000012   Data   RW         4249    .data               magazine.o
+    0x200003c4   0x00000008   Data   RW         4185    .data               calculate.o
+    0x200003cc   0x00000012   Data   RW         4261    .data               magazine.o
     0x200003de   0x00000002   PAD
-    0x200003e0   0x0000008c   Data   RW         4325    .data               revolver.o
-    0x2000046c   0x00000050   Zero   RW          260    .bss                can.o
-    0x200004bc   0x0000009c   Zero   RW          335    .bss                tim.o
-    0x20000558   0x00000240   Zero   RW          394    .bss                usart.o
-    0x20000798   0x0000006c   Zero   RW         3418    .bss                bsp_can.o
-    0x20000804   0x00000028   Zero   RW         3539    .bss                bsp_uart.o
-    0x2000082c   0x00000080   Zero   RW         3650    .bss                user_tim.o
-    0x200008ac   0x0000048c   Zero   RW         3719    .bss                task_gimbal.o
-    0x20000d38   0x00000090   Zero   RW         3861    .bss                shoot.o
-    0x20000dc8   0x00000016   Zero   RW         4047    .bss                system.o
-    0x20000dde   0x00000002   PAD
-    0x20000de0   0x00000020   Zero   RW         4125    .bss                vision.o
-    0x20000e00   0x00000024   Zero   RW         4324    .bss                revolver.o
-    0x20000e24   0x00000004   PAD
-    0x20000e28   0x00000400   Zero   RW            1    STACK               startup_stm32f427xx.o
+    0x200003e0   0x00000091   Data   RW         4338    .data               revolver.o
+    0x20000471   0x00000003   PAD
+    0x20000474   0x00000050   Zero   RW          260    .bss                can.o
+    0x200004c4   0x0000009c   Zero   RW          335    .bss                tim.o
+    0x20000560   0x00000240   Zero   RW          394    .bss                usart.o
+    0x200007a0   0x0000006c   Zero   RW         3418    .bss                bsp_can.o
+    0x2000080c   0x00000028   Zero   RW         3539    .bss                bsp_uart.o
+    0x20000834   0x00000080   Zero   RW         3650    .bss                user_tim.o
+    0x200008b4   0x0000048c   Zero   RW         3719    .bss                task_gimbal.o
+    0x20000d40   0x00000090   Zero   RW         3863    .bss                shoot.o
+    0x20000dd0   0x00000016   Zero   RW         4059    .bss                system.o
+    0x20000de6   0x00000002   PAD
+    0x20000de8   0x00000020   Zero   RW         4137    .bss                vision.o
+    0x20000e08   0x00000024   Zero   RW         4337    .bss                revolver.o
+    0x20000e2c   0x00000004   PAD
+    0x20000e30   0x00000400   Zero   RW            1    STACK               startup_stm32f427xx.o
 
 
 ==============================================================================
@@ -2649,7 +2664,7 @@ Image component sizes
          0          0          0         89          0       2831   jy901.o
        360         64          0         18          0       2518   magazine.o
         18          0          0          0          0     763175   main.o
-      2738        496          0        140         36      13298   revolver.o
+      2954        534          0        145         36      14037   revolver.o
        962        102          0         61        144       6988   shoot.o
         36          8        428          0       1024        812   startup_stm32f427xx.o
        172         32          0          9          0       3773   stm32f4xx_hal.o
@@ -2672,9 +2687,9 @@ Image component sizes
          0          0          0          3         32       1254   vision.o
 
     ----------------------------------------------------------------------
-     27432       2482        492       1132       3516     945255   Object Totals
+     27648       2520        492       1140       3516     945994   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        34          0          0         14          6          0   (incl. Padding)
+        34          0          0         17          6          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -2734,15 +2749,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     30752       2506        492       1132       3516     955815   Grand Totals
-     30752       2506        492         92       3516     955815   ELF Image Totals (compressed)
-     30752       2506        492         92          0          0   ROM Totals
+     30968       2544        492       1140       3516     956554   Grand Totals
+     30968       2544        492         92       3516     956554   ELF Image Totals (compressed)
+     30968       2544        492         92          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                31244 (  30.51kB)
-    Total RW  Size (RW Data + ZI Data)              4648 (   4.54kB)
-    Total ROM Size (Code + RO Data + RW Data)      31336 (  30.60kB)
+    Total RO  Size (Code + RO Data)                31460 (  30.72kB)
+    Total RW  Size (RW Data + ZI Data)              4656 (   4.55kB)
+    Total ROM Size (Code + RO Data + RW Data)      31552 (  30.81kB)
 
 ==============================================================================
 

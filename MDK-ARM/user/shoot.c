@@ -17,7 +17,6 @@ pid_t M3508F_PID;//左右摩擦轮pid变量
 fric_shoot_t fric_speed;
 //遥控模式下的一些标志位
 uint8_t Friction_Switch = 0;
-
 uint8_t fric_changing_flag;
 float fric_out1,fric_out2;//英雄左右摩擦轮最终输出值
 int shoot_ramp=5;
@@ -44,7 +43,7 @@ void shoot_init(void)
 {
     Fric_Speed_Level=FRI_OFF;
     fric_speed.target_fric_spd[0]=1000;
-	fric_speed.target_fric_spd[1]=1000;
+		fric_speed.target_fric_spd[1]=1000;
     laser_off;
     PID_struct_init(&M3508E_PID,POSITION_PID,1.0,0.1,0,2000,2000);//左右摩擦轮pid参数设置
 		PID_struct_init(&M3508F_PID,POSITION_PID,1.0,0.1,0,2000,2000);
@@ -95,6 +94,41 @@ void Shoot_Ctrl(void)
         fric_speed.target_fric_spd[1] = shoot_target[Fric_Speed_Level][1];//摩擦轮目标值大于0,标志着遥控模式下开启,告诉pitch要抬头
         shoot_fric_ctrl();        
 }
+/**
+  * @brief  胶轮控制函数
+  * @param  void
+  * @retval void
+  * @attention 键盘模式，鼠标左键长按，脚轮送弹
+  */
+void Rubber_Ctrl(void)
+{
+	if(SYSTEM_GetRemoteMode( ) == KEY)
+	{
+		Rubber_KeyLevel_Ctrl();
+	}
+	if(SYSTEM_GetRemoteMode( ) == RC)
+	{
+	 }        //遥控器控制拨弹
+	
+		
+}
+/**
+  * @brief  胶轮控制,键盘专用
+  * @param  
+  * @retval void
+  * @attention 键盘模式鼠标左键控制胶轮送弹
+  */
+
+void Rubber_KeyLevel_Ctrl(void)
+{
+	if(IF_MOUSE_PRESSED_LEFT)
+	{
+		shoot_rubber_ctrl();
+	}
+
+}
+
+
 /**
   * @brief  摩擦轮遥控控制
   * @param  void
@@ -324,7 +358,6 @@ float pid_calc(pid_t* pid, float get, float set){
 //      return pid->pid_mode==POSITION_PID ? pid->pos_out : pid->delta_out;
         return pid->pos_out;
 }
-
 
 //设置胶轮转速
 void shoot_rubber_ctrl(void)
