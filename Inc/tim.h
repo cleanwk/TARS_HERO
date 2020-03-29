@@ -71,9 +71,4 @@ extern TIM_OC_InitTypeDef TIM8_PWM_OC;
 void TIM8_PWM_Init(void);
 void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef *htim);
 
-
-
 #endif
-
-
-

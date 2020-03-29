@@ -639,6 +639,7 @@ Section Cross References
     shoot.o(i.shoot_init) refers to shoot.o(i.PID_struct_init) for PID_struct_init
     shoot.o(i.shoot_init) refers to shoot.o(.data) for Fric_Speed_Level
     shoot.o(i.shoot_init) refers to shoot.o(.bss) for fric_speed
+    shoot.o(i.shoot_rubber_ctrl) refers to shoot.o(.data) for rubber_spd
     blurry_pid.o(i.CalcMembership) refers to f2d.o(.text) for __aeabi_f2d
     blurry_pid.o(i.CalcMembership) refers to dmul.o(.text) for __aeabi_dmul
     blurry_pid.o(i.CalcMembership) refers to dadd.o(.text) for __aeabi_dsub
@@ -1309,7 +1310,7 @@ Removing Unused input sections from the image.
     Removing shoot.o(i.Rubber_Ctrl), (20 bytes).
     Removing shoot.o(i.Rubber_KeyLevel_Ctrl), (20 bytes).
     Removing shoot.o(i.shoot_StopMotor), (2 bytes).
-    Removing shoot.o(i.shoot_rubber_ctrl), (16 bytes).
+    Removing shoot.o(i.shoot_rubber_ctrl), (112 bytes).
     Removing blurry_pid.o(i.CalcMembership), (1136 bytes).
     Removing blurry_pid.o(i.FuzzyComputation), (668 bytes).
     Removing blurry_pid.o(i.LinearQuantization), (204 bytes).
@@ -1370,7 +1371,7 @@ Removing Unused input sections from the image.
     Removing dadd.o(.text), (334 bytes).
     Removing ddiv.o(.text), (222 bytes).
 
-518 unused section(s) (total 38442 bytes) removed from the image.
+518 unused section(s) (total 38538 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1792,41 +1793,41 @@ Image Symbol Table
     iTermYaw                                 0x200002f0   Data           8  task_gimbal.o(.data)
     dTermPitch                               0x200002f8   Data           4  task_gimbal.o(.data)
     dTermYaw                                 0x200002fc   Data           8  task_gimbal.o(.data)
-    .data                                    0x20000304   Section       61  shoot.o(.data)
-    Friction_Switch                          0x20000340   Data           1  shoot.o(.data)
-    .data                                    0x20000344   Section       89  jy901.o(.data)
-    ucRxCnt                                  0x2000039c   Data           1  jy901.o(.data)
-    .data                                    0x200003a0   Section       30  system.o(.data)
-    .data                                    0x200003be   Section        3  vision.o(.data)
-    .data                                    0x200003c4   Section        8  calculate.o(.data)
-    .data                                    0x200003cc   Section       18  magazine.o(.data)
-    opened_tick                              0x200003d6   Data           1  magazine.o(.data)
-    Maga_tick                                0x200003d7   Data           1  magazine.o(.data)
-    Maga_Key_state                           0x200003d8   Data           2  magazine.o(.data)
-    Maga_time                                0x200003da   Data           4  magazine.o(.data)
-    .data                                    0x200003e0   Section      145  revolver.o(.data)
-    shoot_left_time                          0x20000454   Data           4  revolver.o(.data)
-    RespondTime                              0x20000458   Data           4  revolver.o(.data)
-    RespondTime                              0x2000045c   Data           4  revolver.o(.data)
+    .data                                    0x20000304   Section       69  shoot.o(.data)
+    Friction_Switch                          0x20000348   Data           1  shoot.o(.data)
+    .data                                    0x2000034c   Section       89  jy901.o(.data)
+    ucRxCnt                                  0x200003a4   Data           1  jy901.o(.data)
+    .data                                    0x200003a8   Section       30  system.o(.data)
+    .data                                    0x200003c6   Section        3  vision.o(.data)
+    .data                                    0x200003cc   Section        8  calculate.o(.data)
+    .data                                    0x200003d4   Section       18  magazine.o(.data)
+    opened_tick                              0x200003de   Data           1  magazine.o(.data)
+    Maga_tick                                0x200003df   Data           1  magazine.o(.data)
+    Maga_Key_state                           0x200003e0   Data           2  magazine.o(.data)
+    Maga_time                                0x200003e2   Data           4  magazine.o(.data)
+    .data                                    0x200003e8   Section      145  revolver.o(.data)
+    shoot_left_time                          0x2000045c   Data           4  revolver.o(.data)
     RespondTime                              0x20000460   Data           4  revolver.o(.data)
-    RespondTime_Stop                         0x20000464   Data           4  revolver.o(.data)
-    RespondTime_MobiPre                      0x20000468   Data           4  revolver.o(.data)
-    stuck_time                               0x2000046c   Data           2  revolver.o(.data)
-    turnback_time                            0x2000046e   Data           2  revolver.o(.data)
-    Revol_Posit_ifStuck                      0x20000470   Data           1  revolver.o(.data)
-    .bss                                     0x20000474   Section       80  can.o(.bss)
-    .bss                                     0x200004c4   Section      156  tim.o(.bss)
-    .bss                                     0x20000560   Section      576  usart.o(.bss)
-    .bss                                     0x200007a0   Section      108  bsp_can.o(.bss)
-    .bss                                     0x2000080c   Section       40  bsp_uart.o(.bss)
-    .bss                                     0x20000834   Section      128  user_tim.o(.bss)
-    .bss                                     0x200008b4   Section     1164  task_gimbal.o(.bss)
-    yaw_speed_error                          0x20000d30   Data          16  task_gimbal.o(.bss)
-    .bss                                     0x20000d40   Section      144  shoot.o(.bss)
-    .bss                                     0x20000dd0   Section       22  system.o(.bss)
-    .bss                                     0x20000de8   Section       32  vision.o(.bss)
-    .bss                                     0x20000e08   Section       36  revolver.o(.bss)
-    STACK                                    0x20000e30   Section     1024  startup_stm32f427xx.o(STACK)
+    RespondTime                              0x20000464   Data           4  revolver.o(.data)
+    RespondTime                              0x20000468   Data           4  revolver.o(.data)
+    RespondTime_Stop                         0x2000046c   Data           4  revolver.o(.data)
+    RespondTime_MobiPre                      0x20000470   Data           4  revolver.o(.data)
+    stuck_time                               0x20000474   Data           2  revolver.o(.data)
+    turnback_time                            0x20000476   Data           2  revolver.o(.data)
+    Revol_Posit_ifStuck                      0x20000478   Data           1  revolver.o(.data)
+    .bss                                     0x2000047c   Section       80  can.o(.bss)
+    .bss                                     0x200004cc   Section      156  tim.o(.bss)
+    .bss                                     0x20000568   Section      576  usart.o(.bss)
+    .bss                                     0x200007a8   Section      108  bsp_can.o(.bss)
+    .bss                                     0x20000814   Section       40  bsp_uart.o(.bss)
+    .bss                                     0x2000083c   Section      128  user_tim.o(.bss)
+    .bss                                     0x200008bc   Section     1164  task_gimbal.o(.bss)
+    yaw_speed_error                          0x20000d38   Data          16  task_gimbal.o(.bss)
+    .bss                                     0x20000d48   Section      144  shoot.o(.bss)
+    .bss                                     0x20000dd8   Section       22  system.o(.bss)
+    .bss                                     0x20000df0   Section       32  vision.o(.bss)
+    .bss                                     0x20000e10   Section       36  revolver.o(.bss)
+    STACK                                    0x20000e38   Section     1024  startup_stm32f427xx.o(STACK)
 
     Global Symbols
 
@@ -2230,116 +2231,118 @@ Image Symbol Table
     shoot_ramp                               0x20000310   Data           4  shoot.o(.data)
     shoot_mode                               0x20000314   Data           4  shoot.o(.data)
     Fric_Speed_Level                         0x20000318   Data           4  shoot.o(.data)
-    shoot_target                             0x2000031c   Data          32  shoot.o(.data)
-    fric_rc_debug                            0x2000033c   Data           4  shoot.o(.data)
-    stcTime                                  0x20000344   Data           8  jy901.o(.data)
-    stcAcc                                   0x2000034c   Data           8  jy901.o(.data)
-    stcGyro                                  0x20000354   Data           8  jy901.o(.data)
-    stcAngle                                 0x2000035c   Data           8  jy901.o(.data)
-    stcMag                                   0x20000364   Data           8  jy901.o(.data)
-    stcDStatus                               0x2000036c   Data           8  jy901.o(.data)
-    stcPress                                 0x20000374   Data           8  jy901.o(.data)
-    stcLonLat                                0x2000037c   Data           8  jy901.o(.data)
-    stcGPSV                                  0x20000384   Data           8  jy901.o(.data)
-    stcQ                                     0x2000038c   Data           8  jy901.o(.data)
-    yaw_w                                    0x20000394   Data           4  jy901.o(.data)
-    yaw_angle                                0x20000398   Data           4  jy901.o(.data)
-    system_time                              0x200003a0   Data           4  system.o(.data)
-    SP1                                      0x200003a4   Data           4  system.o(.data)
-    SP2                                      0x200003a8   Data           4  system.o(.data)
-    SP3                                      0x200003ac   Data           4  system.o(.data)
-    IF_error                                 0x200003b0   Data           1  system.o(.data)
-    system_tick                              0x200003b4   Data           4  system.o(.data)
-    error_register                           0x200003b8   Data           4  system.o(.data)
-    remoteMode                               0x200003bc   Data           1  system.o(.data)
-    systemState                              0x200003bd   Data           1  system.o(.data)
-    actVison                                 0x200003be   Data           1  vision.o(.data)
-    Attack_Color_Choose                      0x200003bf   Data           1  vision.o(.data)
-    Vision_Data_Flag                         0x200003c0   Data           1  vision.o(.data)
-    matrix_value1                            0x200003c4   Data           4  calculate.o(.data)
-    matrix_value2                            0x200003c8   Data           4  calculate.o(.data)
-    Magazine_Switch                          0x200003cc   Data           1  magazine.o(.data)
-    Magazine_flag                            0x200003cd   Data           1  magazine.o(.data)
-    Magazine_opened_flag                     0x200003ce   Data           1  magazine.o(.data)
-    Magazine_Target                          0x200003d0   Data           2  magazine.o(.data)
-    Magazine_Real                            0x200003d2   Data           2  magazine.o(.data)
-    Magazine_Ramp                            0x200003d4   Data           2  magazine.o(.data)
-    Revolver_mode                            0x200003e0   Data           1  revolver.o(.data)
-    actShoot                                 0x200003e1   Data           1  revolver.o(.data)
-    Revolver_Angle_Target_Sum                0x200003e4   Data           4  revolver.o(.data)
-    Revolver_Target_Sum_temp                 0x200003e8   Data           4  revolver.o(.data)
-    Revolver_Ramp                            0x200003ec   Data           4  revolver.o(.data)
-    Revolver_Angle_Measure_Sum               0x200003f0   Data           4  revolver.o(.data)
-    Revolver_Angle_Measure_Prev              0x200003f4   Data           2  revolver.o(.data)
-    Revolver_Speed_Measure                   0x200003f6   Data           2  revolver.o(.data)
-    Revolver_Angle_Measure                   0x200003f8   Data           2  revolver.o(.data)
-    Revolver_Speed_Error                     0x200003fc   Data           4  revolver.o(.data)
-    Revolver_Angle_Error                     0x20000400   Data           8  revolver.o(.data)
-    Revolver_Angle_Target                    0x20000408   Data           4  revolver.o(.data)
-    Revolver_Speed_Target                    0x2000040c   Data           4  revolver.o(.data)
-    Revolver_Freq                            0x20000410   Data           2  revolver.o(.data)
-    Shoot_Interval                           0x20000414   Data           4  revolver.o(.data)
-    Revol_Posit_RespondTime                  0x20000418   Data           4  revolver.o(.data)
-    Revol_Switch_Left                        0x2000041c   Data           1  revolver.o(.data)
-    pTermRevolSpeed                          0x20000420   Data           4  revolver.o(.data)
-    iTermRevolSpeed                          0x20000424   Data           4  revolver.o(.data)
-    pTermRevolAngle                          0x20000428   Data           8  revolver.o(.data)
-    iTermRevolAngle                          0x20000430   Data           8  revolver.o(.data)
-    Revolver_Output_Max                      0x20000438   Data           4  revolver.o(.data)
-    iTermRevolSpeedMax                       0x2000043c   Data           4  revolver.o(.data)
-    iTermRevolPosiMax                        0x20000440   Data           4  revolver.o(.data)
-    Revolver_Final_Output                    0x20000444   Data           4  revolver.o(.data)
-    Key_ShootNum                             0x20000448   Data           2  revolver.o(.data)
-    ShootNum_Allow                           0x2000044a   Data           2  revolver.o(.data)
-    Residue_Heat                             0x2000044c   Data           2  revolver.o(.data)
-    Shoot_HeatLimit                          0x2000044e   Data           2  revolver.o(.data)
-    Shoot_HeatIncSpeed                       0x20000450   Data           2  revolver.o(.data)
-    revol_remot_change                       0x20000452   Data           1  revolver.o(.data)
-    Revolver_Switch                          0x20000453   Data           1  revolver.o(.data)
-    hcan1                                    0x20000474   Data          40  can.o(.bss)
-    hcan2                                    0x2000049c   Data          40  can.o(.bss)
-    htim1                                    0x200004c4   Data          64  tim.o(.bss)
-    TIM8_PWM_Handler                         0x20000504   Data          64  tim.o(.bss)
-    TIM8_PWM_OC                              0x20000544   Data          28  tim.o(.bss)
-    huart6                                   0x20000560   Data          64  usart.o(.bss)
-    hdma_usart6_rx                           0x200005a0   Data          96  usart.o(.bss)
-    huart1                                   0x20000600   Data          64  usart.o(.bss)
-    huart2                                   0x20000640   Data          64  usart.o(.bss)
-    hdma_usart1_rx                           0x20000680   Data          96  usart.o(.bss)
-    hdma_usart2_rx                           0x200006e0   Data          96  usart.o(.bss)
-    hdma_usart2_tx                           0x20000740   Data          96  usart.o(.bss)
-    M3508                                    0x200007a0   Data          48  bsp_can.o(.bss)
-    GM6020                                   0x200007d0   Data          24  bsp_can.o(.bss)
-    GM_TEST                                  0x200007e8   Data          24  bsp_can.o(.bss)
-    M2006                                    0x20000800   Data          12  bsp_can.o(.bss)
-    dbus_buf                                 0x2000080c   Data          18  bsp_uart.o(.bss)
-    rc_t                                     0x2000081e   Data          22  bsp_uart.o(.bss)
-    htim3                                    0x20000834   Data          64  user_tim.o(.bss)
-    htim4                                    0x20000874   Data          64  user_tim.o(.bss)
-    Cloud_Angle_Target                       0x200008b4   Data          16  task_gimbal.o(.bss)
-    Cloud_Angle_Measure                      0x200008c4   Data          16  task_gimbal.o(.bss)
-    Cloud_Palstance_Measure                  0x200008d4   Data          16  task_gimbal.o(.bss)
-    Pitch_mech_pid                           0x200008e4   Data         132  task_gimbal.o(.bss)
-    Yaw_mech_pid                             0x20000968   Data         132  task_gimbal.o(.bss)
-    Yaw_gyro_pid                             0x200009ec   Data         132  task_gimbal.o(.bss)
-    Gimbal_PID_list                          0x20000a70   Data         288  task_gimbal.o(.bss)
-    Gimbal_Pitch_Mech_Error_Kalman           0x20000b90   Data          36  task_gimbal.o(.bss)
-    Gimbal_Yaw_Mech_Error_Kalman             0x20000bb4   Data          36  task_gimbal.o(.bss)
-    Gimbal_Yaw_Gyro_Error_Kalman             0x20000bd8   Data          36  task_gimbal.o(.bss)
-    Vision_Distance_Kalman                   0x20000bfc   Data          36  task_gimbal.o(.bss)
-    Vision_Yaw_speed_Struct                  0x20000c20   Data          28  task_gimbal.o(.bss)
-    Vision_Pitch_speed_Struct                0x20000c3c   Data          28  task_gimbal.o(.bss)
-    yaw_kalman_filter                        0x20000c58   Data         108  task_gimbal.o(.bss)
-    pitch_kalman_filter                      0x20000cc4   Data         108  task_gimbal.o(.bss)
-    M3508E_PID                               0x20000d40   Data          64  shoot.o(.bss)
-    M3508F_PID                               0x20000d80   Data          64  shoot.o(.bss)
-    fric_speed                               0x20000dc0   Data          16  shoot.o(.bss)
-    Rx                                       0x20000dd0   Data          22  system.o(.bss)
-    VisionRecvData                           0x20000de8   Data          16  vision.o(.bss)
-    VisionSendData                           0x20000df8   Data          16  vision.o(.bss)
-    Revolver_Speed_kpid                      0x20000e08   Data          12  revolver.o(.bss)
-    Revolver_Angle_kpid                      0x20000e14   Data          24  revolver.o(.bss)
-    __initial_sp                             0x20001230   Data           0  startup_stm32f427xx.o(STACK)
+    rubber_ramp                              0x2000031c   Data           4  shoot.o(.data)
+    rubber_spd                               0x20000320   Data           4  shoot.o(.data)
+    shoot_target                             0x20000324   Data          32  shoot.o(.data)
+    fric_rc_debug                            0x20000344   Data           4  shoot.o(.data)
+    stcTime                                  0x2000034c   Data           8  jy901.o(.data)
+    stcAcc                                   0x20000354   Data           8  jy901.o(.data)
+    stcGyro                                  0x2000035c   Data           8  jy901.o(.data)
+    stcAngle                                 0x20000364   Data           8  jy901.o(.data)
+    stcMag                                   0x2000036c   Data           8  jy901.o(.data)
+    stcDStatus                               0x20000374   Data           8  jy901.o(.data)
+    stcPress                                 0x2000037c   Data           8  jy901.o(.data)
+    stcLonLat                                0x20000384   Data           8  jy901.o(.data)
+    stcGPSV                                  0x2000038c   Data           8  jy901.o(.data)
+    stcQ                                     0x20000394   Data           8  jy901.o(.data)
+    yaw_w                                    0x2000039c   Data           4  jy901.o(.data)
+    yaw_angle                                0x200003a0   Data           4  jy901.o(.data)
+    system_time                              0x200003a8   Data           4  system.o(.data)
+    SP1                                      0x200003ac   Data           4  system.o(.data)
+    SP2                                      0x200003b0   Data           4  system.o(.data)
+    SP3                                      0x200003b4   Data           4  system.o(.data)
+    IF_error                                 0x200003b8   Data           1  system.o(.data)
+    system_tick                              0x200003bc   Data           4  system.o(.data)
+    error_register                           0x200003c0   Data           4  system.o(.data)
+    remoteMode                               0x200003c4   Data           1  system.o(.data)
+    systemState                              0x200003c5   Data           1  system.o(.data)
+    actVison                                 0x200003c6   Data           1  vision.o(.data)
+    Attack_Color_Choose                      0x200003c7   Data           1  vision.o(.data)
+    Vision_Data_Flag                         0x200003c8   Data           1  vision.o(.data)
+    matrix_value1                            0x200003cc   Data           4  calculate.o(.data)
+    matrix_value2                            0x200003d0   Data           4  calculate.o(.data)
+    Magazine_Switch                          0x200003d4   Data           1  magazine.o(.data)
+    Magazine_flag                            0x200003d5   Data           1  magazine.o(.data)
+    Magazine_opened_flag                     0x200003d6   Data           1  magazine.o(.data)
+    Magazine_Target                          0x200003d8   Data           2  magazine.o(.data)
+    Magazine_Real                            0x200003da   Data           2  magazine.o(.data)
+    Magazine_Ramp                            0x200003dc   Data           2  magazine.o(.data)
+    Revolver_mode                            0x200003e8   Data           1  revolver.o(.data)
+    actShoot                                 0x200003e9   Data           1  revolver.o(.data)
+    Revolver_Angle_Target_Sum                0x200003ec   Data           4  revolver.o(.data)
+    Revolver_Target_Sum_temp                 0x200003f0   Data           4  revolver.o(.data)
+    Revolver_Ramp                            0x200003f4   Data           4  revolver.o(.data)
+    Revolver_Angle_Measure_Sum               0x200003f8   Data           4  revolver.o(.data)
+    Revolver_Angle_Measure_Prev              0x200003fc   Data           2  revolver.o(.data)
+    Revolver_Speed_Measure                   0x200003fe   Data           2  revolver.o(.data)
+    Revolver_Angle_Measure                   0x20000400   Data           2  revolver.o(.data)
+    Revolver_Speed_Error                     0x20000404   Data           4  revolver.o(.data)
+    Revolver_Angle_Error                     0x20000408   Data           8  revolver.o(.data)
+    Revolver_Angle_Target                    0x20000410   Data           4  revolver.o(.data)
+    Revolver_Speed_Target                    0x20000414   Data           4  revolver.o(.data)
+    Revolver_Freq                            0x20000418   Data           2  revolver.o(.data)
+    Shoot_Interval                           0x2000041c   Data           4  revolver.o(.data)
+    Revol_Posit_RespondTime                  0x20000420   Data           4  revolver.o(.data)
+    Revol_Switch_Left                        0x20000424   Data           1  revolver.o(.data)
+    pTermRevolSpeed                          0x20000428   Data           4  revolver.o(.data)
+    iTermRevolSpeed                          0x2000042c   Data           4  revolver.o(.data)
+    pTermRevolAngle                          0x20000430   Data           8  revolver.o(.data)
+    iTermRevolAngle                          0x20000438   Data           8  revolver.o(.data)
+    Revolver_Output_Max                      0x20000440   Data           4  revolver.o(.data)
+    iTermRevolSpeedMax                       0x20000444   Data           4  revolver.o(.data)
+    iTermRevolPosiMax                        0x20000448   Data           4  revolver.o(.data)
+    Revolver_Final_Output                    0x2000044c   Data           4  revolver.o(.data)
+    Key_ShootNum                             0x20000450   Data           2  revolver.o(.data)
+    ShootNum_Allow                           0x20000452   Data           2  revolver.o(.data)
+    Residue_Heat                             0x20000454   Data           2  revolver.o(.data)
+    Shoot_HeatLimit                          0x20000456   Data           2  revolver.o(.data)
+    Shoot_HeatIncSpeed                       0x20000458   Data           2  revolver.o(.data)
+    revol_remot_change                       0x2000045a   Data           1  revolver.o(.data)
+    Revolver_Switch                          0x2000045b   Data           1  revolver.o(.data)
+    hcan1                                    0x2000047c   Data          40  can.o(.bss)
+    hcan2                                    0x200004a4   Data          40  can.o(.bss)
+    htim1                                    0x200004cc   Data          64  tim.o(.bss)
+    TIM8_PWM_Handler                         0x2000050c   Data          64  tim.o(.bss)
+    TIM8_PWM_OC                              0x2000054c   Data          28  tim.o(.bss)
+    huart6                                   0x20000568   Data          64  usart.o(.bss)
+    hdma_usart6_rx                           0x200005a8   Data          96  usart.o(.bss)
+    huart1                                   0x20000608   Data          64  usart.o(.bss)
+    huart2                                   0x20000648   Data          64  usart.o(.bss)
+    hdma_usart1_rx                           0x20000688   Data          96  usart.o(.bss)
+    hdma_usart2_rx                           0x200006e8   Data          96  usart.o(.bss)
+    hdma_usart2_tx                           0x20000748   Data          96  usart.o(.bss)
+    M3508                                    0x200007a8   Data          48  bsp_can.o(.bss)
+    GM6020                                   0x200007d8   Data          24  bsp_can.o(.bss)
+    GM_TEST                                  0x200007f0   Data          24  bsp_can.o(.bss)
+    M2006                                    0x20000808   Data          12  bsp_can.o(.bss)
+    dbus_buf                                 0x20000814   Data          18  bsp_uart.o(.bss)
+    rc_t                                     0x20000826   Data          22  bsp_uart.o(.bss)
+    htim3                                    0x2000083c   Data          64  user_tim.o(.bss)
+    htim4                                    0x2000087c   Data          64  user_tim.o(.bss)
+    Cloud_Angle_Target                       0x200008bc   Data          16  task_gimbal.o(.bss)
+    Cloud_Angle_Measure                      0x200008cc   Data          16  task_gimbal.o(.bss)
+    Cloud_Palstance_Measure                  0x200008dc   Data          16  task_gimbal.o(.bss)
+    Pitch_mech_pid                           0x200008ec   Data         132  task_gimbal.o(.bss)
+    Yaw_mech_pid                             0x20000970   Data         132  task_gimbal.o(.bss)
+    Yaw_gyro_pid                             0x200009f4   Data         132  task_gimbal.o(.bss)
+    Gimbal_PID_list                          0x20000a78   Data         288  task_gimbal.o(.bss)
+    Gimbal_Pitch_Mech_Error_Kalman           0x20000b98   Data          36  task_gimbal.o(.bss)
+    Gimbal_Yaw_Mech_Error_Kalman             0x20000bbc   Data          36  task_gimbal.o(.bss)
+    Gimbal_Yaw_Gyro_Error_Kalman             0x20000be0   Data          36  task_gimbal.o(.bss)
+    Vision_Distance_Kalman                   0x20000c04   Data          36  task_gimbal.o(.bss)
+    Vision_Yaw_speed_Struct                  0x20000c28   Data          28  task_gimbal.o(.bss)
+    Vision_Pitch_speed_Struct                0x20000c44   Data          28  task_gimbal.o(.bss)
+    yaw_kalman_filter                        0x20000c60   Data         108  task_gimbal.o(.bss)
+    pitch_kalman_filter                      0x20000ccc   Data         108  task_gimbal.o(.bss)
+    M3508E_PID                               0x20000d48   Data          64  shoot.o(.bss)
+    M3508F_PID                               0x20000d88   Data          64  shoot.o(.bss)
+    fric_speed                               0x20000dc8   Data          16  shoot.o(.bss)
+    Rx                                       0x20000dd8   Data          22  system.o(.bss)
+    VisionRecvData                           0x20000df0   Data          16  vision.o(.bss)
+    VisionSendData                           0x20000e00   Data          16  vision.o(.bss)
+    Revolver_Speed_kpid                      0x20000e10   Data          12  revolver.o(.bss)
+    Revolver_Angle_kpid                      0x20000e1c   Data          24  revolver.o(.bss)
+    __initial_sp                             0x20001238   Data           0  startup_stm32f427xx.o(STACK)
 
 
 
@@ -2349,7 +2352,7 @@ Memory Map of the image
 
   Image Entry point : 0x080001ad
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00007f58, Max: 0x00200000, ABSOLUTE, COMPRESSED[0x00007b40])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00007f60, Max: 0x00200000, ABSOLUTE, COMPRESSED[0x00007b40])
 
     Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00007ae4, Max: 0x00200000, ABSOLUTE)
 
@@ -2610,7 +2613,7 @@ Memory Map of the image
     0x08007ac4   0x00000020   Data   RO         4694    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00001230, Max: 0x00030000, ABSOLUTE, COMPRESSED[0x0000005c])
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00001238, Max: 0x00030000, ABSOLUTE, COMPRESSED[0x0000005c])
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2620,32 +2623,32 @@ Memory Map of the image
     0x20000010   0x00000004   Data   RW         3376    .data               system_stm32f4xx.o
     0x20000014   0x00000010   Data   RW         3419    .data               bsp_can.o
     0x20000024   0x000002e0   Data   RW         3720    .data               task_gimbal.o
-    0x20000304   0x0000003d   Data   RW         3864    .data               shoot.o
-    0x20000341   0x00000003   PAD
-    0x20000344   0x00000059   Data   RW         4009    .data               jy901.o
-    0x2000039d   0x00000003   PAD
-    0x200003a0   0x0000001e   Data   RW         4060    .data               system.o
-    0x200003be   0x00000003   Data   RW         4138    .data               vision.o
-    0x200003c1   0x00000003   PAD
-    0x200003c4   0x00000008   Data   RW         4185    .data               calculate.o
-    0x200003cc   0x00000012   Data   RW         4261    .data               magazine.o
-    0x200003de   0x00000002   PAD
-    0x200003e0   0x00000091   Data   RW         4338    .data               revolver.o
-    0x20000471   0x00000003   PAD
-    0x20000474   0x00000050   Zero   RW          260    .bss                can.o
-    0x200004c4   0x0000009c   Zero   RW          335    .bss                tim.o
-    0x20000560   0x00000240   Zero   RW          394    .bss                usart.o
-    0x200007a0   0x0000006c   Zero   RW         3418    .bss                bsp_can.o
-    0x2000080c   0x00000028   Zero   RW         3539    .bss                bsp_uart.o
-    0x20000834   0x00000080   Zero   RW         3650    .bss                user_tim.o
-    0x200008b4   0x0000048c   Zero   RW         3719    .bss                task_gimbal.o
-    0x20000d40   0x00000090   Zero   RW         3863    .bss                shoot.o
-    0x20000dd0   0x00000016   Zero   RW         4059    .bss                system.o
-    0x20000de6   0x00000002   PAD
-    0x20000de8   0x00000020   Zero   RW         4137    .bss                vision.o
-    0x20000e08   0x00000024   Zero   RW         4337    .bss                revolver.o
-    0x20000e2c   0x00000004   PAD
-    0x20000e30   0x00000400   Zero   RW            1    STACK               startup_stm32f427xx.o
+    0x20000304   0x00000045   Data   RW         3864    .data               shoot.o
+    0x20000349   0x00000003   PAD
+    0x2000034c   0x00000059   Data   RW         4009    .data               jy901.o
+    0x200003a5   0x00000003   PAD
+    0x200003a8   0x0000001e   Data   RW         4060    .data               system.o
+    0x200003c6   0x00000003   Data   RW         4138    .data               vision.o
+    0x200003c9   0x00000003   PAD
+    0x200003cc   0x00000008   Data   RW         4185    .data               calculate.o
+    0x200003d4   0x00000012   Data   RW         4261    .data               magazine.o
+    0x200003e6   0x00000002   PAD
+    0x200003e8   0x00000091   Data   RW         4338    .data               revolver.o
+    0x20000479   0x00000003   PAD
+    0x2000047c   0x00000050   Zero   RW          260    .bss                can.o
+    0x200004cc   0x0000009c   Zero   RW          335    .bss                tim.o
+    0x20000568   0x00000240   Zero   RW          394    .bss                usart.o
+    0x200007a8   0x0000006c   Zero   RW         3418    .bss                bsp_can.o
+    0x20000814   0x00000028   Zero   RW         3539    .bss                bsp_uart.o
+    0x2000083c   0x00000080   Zero   RW         3650    .bss                user_tim.o
+    0x200008bc   0x0000048c   Zero   RW         3719    .bss                task_gimbal.o
+    0x20000d48   0x00000090   Zero   RW         3863    .bss                shoot.o
+    0x20000dd8   0x00000016   Zero   RW         4059    .bss                system.o
+    0x20000dee   0x00000002   PAD
+    0x20000df0   0x00000020   Zero   RW         4137    .bss                vision.o
+    0x20000e10   0x00000024   Zero   RW         4337    .bss                revolver.o
+    0x20000e34   0x00000004   PAD
+    0x20000e38   0x00000400   Zero   RW            1    STACK               startup_stm32f427xx.o
 
 
 ==============================================================================
@@ -2665,7 +2668,7 @@ Image component sizes
        360         64          0         18          0       2558   magazine.o
         18          0          0          0          0     763287   main.o
       2954        534          0        145         36      14261   revolver.o
-       962        102          0         61        144       7120   shoot.o
+       962        102          0         69        144       7203   shoot.o
         36          8        428          0       1024        820   startup_stm32f427xx.o
        172         32          0          9          0       3825   stm32f4xx_hal.o
       2130          6          0          0          0      12276   stm32f4xx_hal_can.o
@@ -2687,7 +2690,7 @@ Image component sizes
          0          0          0          3         32       1270   vision.o
 
     ----------------------------------------------------------------------
-     27648       2520        492       1140       3516     948370   Object Totals
+     27648       2520        492       1148       3516     948453   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         34          0          0         17          6          0   (incl. Padding)
 
@@ -2749,14 +2752,14 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     30968       2544        492       1140       3516     958930   Grand Totals
-     30968       2544        492         92       3516     958930   ELF Image Totals (compressed)
+     30968       2544        492       1148       3516     959013   Grand Totals
+     30968       2544        492         92       3516     959013   ELF Image Totals (compressed)
      30968       2544        492         92          0          0   ROM Totals
 
 ==============================================================================
 
     Total RO  Size (Code + RO Data)                31460 (  30.72kB)
-    Total RW  Size (RW Data + ZI Data)              4656 (   4.55kB)
+    Total RW  Size (RW Data + ZI Data)              4664 (   4.55kB)
     Total ROM Size (Code + RO Data + RW Data)      31552 (  30.81kB)
 
 ==============================================================================

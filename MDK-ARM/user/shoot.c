@@ -12,7 +12,7 @@ pid_t M3508F_PID;//左右摩擦轮pid变量
 //#define FRI_MID  	2		//B键射速，
 #define FRI_HIGH 	2		//B键 英雄高射速
 #define FRI_MAD  	3		//吊射射速，英雄暂定高低，吊射三种
-#define rubber_speed  500  //胶轮的速度
+#define target_rubber_spd  500  //胶轮的速度
 //#define FRI_MAX     5		//极限射速
 fric_shoot_t fric_speed;
 //遥控模式下的一些标志位
@@ -22,6 +22,8 @@ float fric_out1,fric_out2;//英雄左右摩擦轮最终输出值
 int shoot_ramp=5;
 int shoot_mode;
 int Fric_Speed_Level;
+int rubber_ramp=10;
+int rubber_spd;
 #if		INFANTRY_DEBUG_ID == 3
 int shoot_target[4][2]=       //默认8000，高速时11000，（待测），吊射10000（待测）
 {
@@ -362,5 +364,29 @@ float pid_calc(pid_t* pid, float get, float set){
 //设置胶轮转速
 void shoot_rubber_ctrl(void)
 {
-	TIM8->CCR1=rubber_speed; //通道1
+	int temp;
+	temp=target_rubber_spd-rubber_spd;
+	if(temp>0)
+	{
+		if(temp>rubber_ramp)
+		{
+				rubber_spd += rubber_ramp;
+		}
+		else
+		{
+				rubber_spd +=  temp;
+		}
+	}
+		else if (temp<0)
+		{
+			if(temp<-rubber_ramp)
+			{
+					rubber_spd -= rubber_ramp;
+			}
+			else
+			{
+					rubber_spd += temp;
+		  }
+		}
+	TIM8->CCR1=rubber_spd; //通道1
 }

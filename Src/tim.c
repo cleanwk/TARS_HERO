@@ -250,9 +250,6 @@ void TIM8_PWM_Init(void)
 		
 		HAL_TIM_PWM_Start(&TIM8_PWM_Handler,TIM_CHANNEL_1);
 }
-
-
-
 void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef *htim)
 {
 	
