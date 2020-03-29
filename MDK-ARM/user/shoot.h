@@ -35,8 +35,10 @@ bool FRIC_RcSwitch(void);
 bool IF_FRIC_READY(void);
 
 
-void shoot_rubber_ctrl(void);  //设置胶轮转速
+
 
 void Rubber_KeyLevel_Ctrl(void);
+void shoot_rubber_ctrl(void);  //设置胶轮转速
+
 
 #endif

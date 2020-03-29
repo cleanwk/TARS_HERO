@@ -364,6 +364,7 @@ float pid_calc(pid_t* pid, float get, float set){
 //设置胶轮转速
 void shoot_rubber_ctrl(void)
 {
+
 	int temp;
 	temp=target_rubber_spd-rubber_spd;
 	if(temp>0)
@@ -390,3 +391,5 @@ void shoot_rubber_ctrl(void)
 		}
 	TIM8->CCR1=rubber_spd; //通道1
 }
+
+	
