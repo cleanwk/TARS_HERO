@@ -51,3 +51,9 @@ Author:     马立伟
 Version:    `UP3.2.1hero`
 版本更新：增加卡单处理，自动检测卡单并自动倒转。
 代码位于revolver.c，`void REVOL_PositStuck(void)`这个函数，但时间相关的参数还需要调整。
+
+## Date:         2020.4.11
+
+Author:     王若凡
+Version:      `UP3.2.2hero`
+版本更新：修复上一版本magazine.c的bug
